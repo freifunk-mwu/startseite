@@ -1,51 +1,53 @@
-url: http://gothamcity.freifunk.net/
+url: http://testpage.freifunk-wiesbaden.de/
 
 community:
   # Metadata
-  name: "Gotham City"
-  meta: "Marvel"
-  country: "MC"
+  name: "Wiesbaden"
+  meta: "Freifunk MWU"
+  country: "DE"
+
+  # SSID
+  ssid: "wiesbaden.freifunk.net"
 
   # Custom URLs
-  url_wiki:  "/wiki"
-  url_geomap: "/map/geomap.html"
-  url_graph: "/map/graph.html"
-  url_nodelist: "/wiki/Knoten"
-  url_mailman: "http://lists.gothamcity.freifunk.net/mailman/listinfo/list"
+  url_wiki:  "http://wiki.freifunk-mainz.de"
+  url_blog:  "http://blog.freifunk-wiesbaden.de"
+  url_calendar:  "http://blog.freifunk-wiesbaden.de/termine"
+  url_geomap: "http://gluonmap.freifunk-wiesbaden.de/geomap.html"
+  url_graph: "http://gluonmap.freifunk-wiesbaden.de/graph.html"
+  url_nodelist: "http://gluonmap.freifunk-wiesbaden.de/list.html"
+  url_mailman: "http://lists.freifunk.net/mailman/listinfo/wiesbaden-freifunk.net"
+  url_git: "http://github.com/freifunk-mwu"
 
   # Mail Contacts
-  mail_info: "info@gothamcity.freifunk.net"
-  mail_keys: "keys@gothamcity.freifunk.net"
-  mail_discussion: "discussion@gothamcity.freifunk.net"
+  mail_info: "info@freifunk-wiesbaden.de"
+  mail_keys: "keys@freifunk-wiesbaden.de"
+  mail_discussion: "wiesbaden@freifunk.net"
 
   # Other Contacts
-  sip: ["space@sip.ffgc", "space@10.35.0.1"] # Optional
-  twitter: "FreiFunkGothamCity" # Optional
-  irc: "ircs://irc.hackint.net/ffgc"
+  #sip: ["space@sip.ffgc", "space@10.35.0.1"] # Optional
+  twitter: "freifunkwi" # Optional
+  irc: "ircs://irc.hackint.net/ffmwu"
 
   # GPS
-  geo_lat: 40.5
-  geo_lon: -74.1
+  geo_lat: 50.08
+  geo_lon: 8.22
 
 firmware:
-  base: "http://gothamcity.freifunk.net/firmware/stable/"
+  base: "http://firmware.freifunk-wiesbaden.de/stable/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
-  gluon_site: "https://github.com/freifunk-gothamcity/site-ffgc"
+  gluon_site: "https://github.com/freifunk-mwu/site-ffmwu"
   # Path to local checkout of the site repo
   gluon_site_dir: "../gluon/site"
 
 tld:
-  label: "ffgc"
+  label: "ffwi.org"
   ns:
-    - "10.35.0.1"
-    - "fd35:f308:a922::ff00"
-    - "10.35.5.1"
-    - "fd35:f308:a922::ff01"
-    - "10.35.10.1"
-    - "fd35:f308:a922::ff02"
-    - "10.35.15.1"
-    - "fd35:f308:a922::ff03"
-    - "10.35.20.1"
-    - "fd35:f308:a922::ff04"
+    - "10.56.0.5"
+    - "fd56:b4dc:4b1e::a38:5"
+    - "10.56.0.7"
+    - "fd56:b4dc:4b1e::a38:7"
+    - "10.56.0.23"
+    - "fd56:b4dc:4b1e::a38:17"

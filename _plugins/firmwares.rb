@@ -62,6 +62,7 @@ module Jekyll
     attr_accessor :factory
     attr_accessor :sysupgrade
     attr_accessor :version
+    attr_accessor :vprefix
     attr_accessor :model
     attr_accessor :make
     attr_accessor :hwrev
@@ -72,6 +73,7 @@ module Jekyll
         "factory" => factory,
         "sysupgrade" => sysupgrade,
         "version" => version,
+        "vprefix" => vprefix,
         "hwrev" => hwrev
       }
     end
@@ -112,6 +114,7 @@ module Jekyll
 
           fw.model.match(HWREV_REGEX) do |m|
             fw.model = m[1]
+            fw.vprefix = m[2]
             fw.hwrev = m[3]
           end
         end
