@@ -1,0 +1,165 @@
+---
+layout: base
+---
+
+<div class="heading">
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Firmware einspielen</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="twelve columns">
+    <p>
+      Um einen Router als Freifunk-Knoten verwenden zu können muss auf diesem das Freifunk Betriebssystem - die Freifunk
+      Firmware - installiert werden. Die Installation ist ganz einfach, du benötigst auch keine technischen Kenntnisse.
+      Wenn du dieser Anleitung folgst kann eigentlich nichts schiefgehen. Und los!
+    </p>
+
+    <h2>Vorbereitungen</h2>
+    <h3>Schritt 1: Firmware herunterladen</h3>
+
+    <p>
+      Die Freifunk Firmware gibt es für viele verschiedene Knoten Typen. Von einem Knoten Typ gibt es unter Umständen
+      auch noch mehrere sogenannte Hardware-Revisionen. Aus diesem Grund ist es <strong>sehr wichtig</strong>, dass du
+      im Vorfeld in Erfahrung bringst, welchen Knoten Typ welcher Hardware-Revision du genau hast um die richtige Firmware
+      herunterladen zu können.
+    </p>
+
+    <figure>
+      <img src="images/firmware-einspielen/firmware-hwrev.png" />
+      <figcaption>
+        Die Identifizierung des Knoten Typs ist ganz einfach: Der Knoten Typ (1) und auch die Hardware-Revision (2) stehen
+        auf der Rückseite deines Knotens.
+      </figcaption>
+    </figure>
+
+    <br />
+    <p>
+      Lade nun die passende Firmware für die Erstinstallation von unserer <a href="firmware.html">Firmware Seite</a> herunter.
+    </p>
+
+    <h3>Schritt 2: Freifunk-Knoten mit dem Computer verbinden</h3>
+
+    <p>
+      Nun ist es Zeit die Antennen(falls vorhanden) an deinen Freifunk-Knoten zu schrauben und diesen mit deinem Computer zu verbinden.
+    </p>
+
+    <figure>
+      <img src="images/firmware-einspielen/firmware-dev-overview.png" />
+      <figcaption>
+        Bitte schraube zuerst die Antenne(n) (1) an die Gewindestecker deines Knotens (2), den du anschließend
+        mit dem beiliegenden Steckernetzteil (3) mit Strom versorgst. Verbinde danach deinen Knoten mit dem beiliegenden
+        grauen Kabel (4) mit deinem Computer.
+      </figcaption>
+    </figure>
+
+    <p>
+      Das graue Kabel muss in den sogenannten LAN-Port (Netzwerkbuchse) am Freifunk-Knoten gesteckt werden. Bei den TP-Link Geräten sind das meistens die gelben Buchsen.
+      In der Regel sind die Buchsen aber auch entsprechend mit LAN bzw. WAN (Internetbuchse) gekennzeichnet.
+    </p>
+
+    <figure>
+      <img src="images/firmware-einspielen/firmware-dev-ports.png" />
+      <figcaption>
+        Hier siehts du z.B. die Ports eines TP-Link TL-WR841ND. Die gelben Buchsen sind für LAN (ja, hier reinstecken) und die blaue für WAN.
+      </figcaption>
+    </figure>
+
+    <h2>Firmware einspielen</h2>
+    <h3>Schritt 3: Administrations-Webseite aufrufen</h3>
+
+    <p>
+      Um die Freifunk Firmware einzuspielen benötigst du auf deinem Computer einen Internet Browser und die passende Firmware Datei, die du
+      schon unter Schritt 1 heruntergeladen hast.
+      <br />
+      <br />
+      Öffne also in einem Internet Browser deiner Wahl die Adresse <a href="http://192.168.1.1" target="_blank">http://192.168.1.1</a>.
+      Die meisten Geräte sind unter dieser Adresse erreichbar. Falls das nicht funktionieren sollte, kannst du die folgenden Optionen probieren:
+      <br />
+      <br />
+        <ul>
+          <li>Suche auf der Rückseite des Geräts nach Hinweisen</li>
+          <li>Schaue im Handbuch nach</li>
+          <li>Probiere <a href="http://192.168.0.1" target="_blank">http://192.168.0.1</a> aus</li>
+        </ul>
+      <br />
+      <br />
+      Wenn das funktioniert hat musst du dich nun mit Benutzernamen und Passwort anmelden. In den meisten Fällen ist das:
+        <ul>
+          <li>Benutzername: "admin"</li>
+          <li>Passwort: "admin"</li>
+        </ul>
+      <br />
+      <br />
+      Sollte das nicht funktionieren, schaue im Handbuch nach oder setz das Gerät mit dem Reset-Knopf auf die Werkseinstellungen zurück 
+      und versuche es anschließend erneut.
+      Nun sieht das Fenster ungefähr so aus - folge dem Link "System Tools".
+    </p>
+
+    <figure>
+      <img src="images/firmware-einspielen/firmware-orig-start.png" />
+      <figcaption>
+        Einstiegsseite der TP-Link Software. Folge dem Link "System Tools".
+      </figcaption>
+    </figure>
+
+    <p>
+      Das Untermenü "System Tools" öffnet sich. Wähle den Unterpunkt "Firmware Upgrade".
+    </p>
+
+    <figure>
+      <img src="images/firmware-einspielen/firmware-orig-selectimage.png" />
+      <figcaption>
+        Zuerst die Firmware Datei auswählen (1), die zuvor heruntergeladen wurde. Danach mit einem Klick auf "Upgrade" (2)
+        den Prozess starten.
+      </figcaption>
+    </figure>
+
+    <p>
+      Du musst einmal bestätigen, dass du die neue Firmware wirklich einspielen willst.
+    </p>
+
+    <figure>
+      <img src="images/firmware-einspielen/firmware-orig-confirm.png" />
+      <figcaption>
+        Bestätigung des Upgrade Prozesses.
+      </figcaption>
+    </figure>
+
+    <p>
+      Fast geschafft. Die Freifunk Firmware wird nun auf dein Knoten geladen und installiert. Bitte ziehe auf keinen Fall das Strom- oder Netzwerkkabel
+      heraus. Das Gerät wäre anschließend defekt.
+    </p>
+
+    <figure>
+      <img src="images/firmware-einspielen/firmware-orig-process.png" />
+      <figcaption>
+        Warte bis der Prozess vollständig abgeschlossen ist.
+      </figcaption>
+    </figure>
+
+    <h2>Abschluss</h2>
+
+    <p>
+      Nachdem die Firmware fertig eingespielt ist, startet dein Freifunk-Knoten neu. Zuerst blinken alle Lämpchen wild, 
+      dann gehen sie aus. Wenn danach das Lämpchen mit dem Zahnrad gemütlich vor sich hin blinkt, ist dein Knoten die Freifunk Firmware
+      geladen und ist bereit für die Konfiguration.
+      <br />
+      <br />
+      Im besten Fall lädt dein Browser die Konfigurationsseite deines Freifunk Knotens nach ein paar Sekunden automatisch.
+      Ist dem nicht so, ziehe das Netzwerkkabel kurz von deinem Computer ab, warte ein paar Sekunden und stöpsle es wieder ein.
+      Rufe danach die Adresse <a href="http://192.168.1.1" target="_blank">http://192.168.1.1</a> in deinem Browser auf und folge den Anweisungen
+      unserer <a href="/knoten-einrichten.html">Einrichtungsanleitung</a>.
+    </p>
+
+    <h3>Fragen? Anregungen?</h3>
+
+    <p>
+      Solltest du Fragen oder Anregungen zum Thema "Freifunk Firmware einspielen" haben, schreib uns einfach 'ne nette E-Mail an <a href="mailto:info@freifunk-wiesbaden.de">info@freifunk-wiesbaden.de</a>. 
+    </p>
+
+  </div>
+</div>
