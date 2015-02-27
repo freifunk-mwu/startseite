@@ -70,15 +70,21 @@ layout: base
     </p>
   </div>
 
-  <div class="side-nav">
-    <div class="four columns">
-      <h5>Links</h5>
-      <ul>
-        <li><a target="_blank" href="{{ site.community.url_blog }}">Blog</a></li>
-        <li><a target="_blank" href="{{ site.community.url_calendar }}">Termine</a></li>
-        <li><a target="_blank" href="{{ site.community.url_git }}">Github</a></li>
-      </ul>
-    </div>
+  <div class="four columns">
+    <ul class="side-nav">
+      <li><a href="#was_ist_freifunk">Was ist Freifunk?</a></li>
+      <li><a href="#wie_funktioniert_freifunk">Wie funktioniert Freifunk?</a></li>
+      <li><a href="#wie_mitmachen">Wie kann ich beim Freifunk mitmachen?</a></li>
+      <li><a href="#warum_freifunk">Warum wird Freifunk gebraucht?</a></li>
+    </ul>
+   </div>
+
+  <div class="four columns">
+    {% for post in site.posts limit: 4 %}
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p>{{ post.teaser }}</p>
+    <p class="postdate"><em>{{ post.date | date: "%B %d, %Y" }}</em></p>
+    {% endfor %}
   </div>
 
 </div>
