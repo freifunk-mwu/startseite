@@ -83,7 +83,7 @@ layout: base
     {% for post in site.posts limit: 4 %}
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <p>{{ post.teaser }}</p>
-    <p class="postdate"><em>{{ post.date | date: "%B %d, %Y" }}</em></p>
+    <p class="postdate"><em>{{ post.date | localize: "%d. %B %Y" }}</em></p>
     {% endfor %}
   </div>
 
