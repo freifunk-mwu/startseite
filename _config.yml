@@ -52,3 +52,8 @@ tld:
     - "fd56:b4dc:4b1e::a38:7"
     - "10.56.0.23"
     - "fd56:b4dc:4b1e::a38:17"
+
+collections:
+  events:
+    output: true
+    permalink: /event/:path/

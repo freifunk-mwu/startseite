@@ -10,15 +10,29 @@ layout: base
   </div>
 </div>
 
+<script type="text/javascript">
+  var cal = ics();
+  {% for event in site.events %}
+  cal.addEvent("{{event.title}}", "", "{{event.location}}", "{{event.start}}", "{{event.end}}");
+  {% endfor %}
+</script>
+
 <div class="row">
   <div class="eight columns">
-    <p>Wenn dich Freifunk interessiert laden wir dich hiermit ein uns unkompliziert kennen zu lernen. Wir treffen uns einmal im Monat.</p>
-    <h2>Chaos Computer Club Mainz, Wiesbaden</h2>
-    <p><strong>Letzter Donnerstag im Monat, um 19 Uhr</strong></p>
-    <p>CCCMZ e.V.<br>
-       Sedanplatz 7<br>
-       65183 Wiesbaden
-    </p>
-    <p>Webseite des Chaostreffs: <a href="https://www.cccmz.de">www.cccmz.de</a></p>
+    <p>Wenn dich Freifunk interessiert, laden wir dich hiermit ein, uns unkompliziert kennen zu lernen. Wir treffen uns immer am letzten Donnerstag im Monat.</p>
+    <p>Unser nächstes Treffen:</p>
+    {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+    {% for event in site.events %}
+    {% capture posttime %}{{event.start | date: '%s'}}{% endcapture %}
+    {% if posttime > nowunix and printed == null %}
+      <h2><a href="{{ event.url }}">{{ event.start | localize: "%d. %B %Y, %H:%M" }} Uhr</a></h2>
+      <p><strong>{{ event.location }}</strong></p>
+      <p>{{ event.content | truncate: 200, '…' }}</p>
+      {% capture printed %}true{% endcapture %}
+    {% endif %}
+    {% endfor %}
   </div>
+  <!--<div class="one column">-->
+    <!--<a href="javascript:cal.download()">iCal</a>-->
+  <!--</div>-->
 </div>
