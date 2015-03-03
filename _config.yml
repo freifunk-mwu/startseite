@@ -1,5 +1,6 @@
 safe: false
-url: http://testpage.freifunk-wiesbaden.de/
+url: http://testpage.freifunk-wiesbaden.de
+baseurl: /
 
 community:
   # Metadata
@@ -57,3 +58,8 @@ collections:
   events:
     output: true
     permalink: /event/:path/
+
+# Config for feed.xml, customized version of https://github.com/snaptortoise/jekyll-rss-feeds
+feed:
+  name: Freifunk Wiesbaden
+  description: Blog der Wiesbadener Freifunk-Community
