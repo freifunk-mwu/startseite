@@ -13,6 +13,7 @@ Dependencies
 * nokogiri
 * jekyll
 * json
+* i18n
 
 On Ubuntu/Debian:
 
@@ -33,7 +34,7 @@ permission to do so. Thanks.
 Build
 -----
 
-Choose an arbitrary location for the checkout of this repository. For editing above files, we suggest to create a new branch in your local git repository. Patches local to your installation then remain in that branch, others commit to your master branch and please push those back to the archive. 
+Choose an arbitrary location for the checkout of this repository. For editing above files, we suggest to create a new branch in your local git repository. Patches local to your installation then remain in that branch, others commit to your master branch and please push those back to the archive.
 
 The complete directory structure of what (under Debian/Ubuntu) should reside under `/path/to/www` will be built from the templates provided by
 
@@ -59,7 +60,7 @@ The site doesn't run in a subdirectory, it only works correctly if it is called 
 Aftermath
 ---------
 
-There are several bits and pieces still missing after the installation of this startseite. 
+There are several bits and pieces still missing after the installation of this startseite.
  * map/graph/List from the ffnord/ffmap-d3 repository on github
  * integration of the www-providing machine with the batman-adv mesh
  * mailing lists and email setup in general
