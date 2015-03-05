@@ -14,6 +14,6 @@ Wir hatten das Ziel in kurzer Zeit eine gute Homepage an den Start zu bringen. L
 Deshalb haben wir das [Standard Freifunk Homepage Template](https://github.com/ffnord/startseite) verwendet, das z.B. auch beim [Freifunk Lübeck](http://luebeck.freifunk.net) in Verwendung ist.
 Vielen Dank an die [Entwickler](https://github.com/ffnord/) des Templates für die super Arbeit.
 
-Ein **fettes Dankeschön** an **Daniel, Frieder und besonders Matthias** für die tatkräftige Unterstützung! Ich bitte um **Applaus** ...
+Ein **fettes Dankeschön** an **Daniel, Frieder und besonders Matthias** für die tatkräftige Unterstützung! Wir bitten um **Applaus** ...
 
 Also viel Spaß mit der neuen Homepage und freifunkende Grüße!
