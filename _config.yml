@@ -1,5 +1,5 @@
 safe: false
-url: http://testpage.freifunk-wiesbaden.de
+url: http://wiesbaden.freifunk.net
 baseurl: /
 
 community:
@@ -13,11 +13,10 @@ community:
 
   # Custom URLs
   url_wiki:  "http://wiki.freifunk-mainz.de"
-  url_blog:  "http://blog.freifunk-wiesbaden.de"
-  url_calendar:  "http://blog.freifunk-wiesbaden.de/termine"
-  url_geomap: "http://gluonmap.freifunk-wiesbaden.de/geomap.html"
-  url_graph: "http://gluonmap.freifunk-wiesbaden.de/graph.html"
-  url_nodelist: "http://gluonmap.freifunk-wiesbaden.de/list.html"
+  url_calendar:  "http://wiesbaden.freifunk.net/ffwi-calendar.ics"
+  url_geomap: "http://map.wiesbaden.freifunk.net/geomap.html"
+  url_graph: "http://map.wiesbaden.freifunk.net/graph.html"
+  url_nodelist: "http://map.wiesbaden.freifunk.net/list.html"
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/wiesbaden-freifunk.net"
   url_git: "http://github.com/freifunk-mwu"
 
@@ -36,7 +35,7 @@ community:
   geo_lon: 8.22
 
 firmware:
-  base: "http://firmware.freifunk-wiesbaden.de/stable/"
+  base: "http://firmware.wiesbaden.freifunk.net/stable/"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
