@@ -28,15 +28,19 @@ BEGIN:VEVENT
 DTSTART;TZID=Europe/Berlin:20150226T190000
 DTEND;TZID=Europe/Berlin:20150226T210000
 RRULE:FREQ=MONTHLY;BYDAY=-1TH
-DTSTAMP:20150301T111045Z
+DTSTAMP:20150306T111045Z
 UID:20150301T111015Z@freifunk-wiesbaden.de
-CREATED:20150301T111015Z
-DESCRIPTION:Monatliches Treffen der Wiesbadener Freifunk-Community
-LAST-MODIFIED:20150301T111015Z
-LOCATION:Chaos Computer Club Mainz Wiesbaden\, Sedanplatz 7\, 65183 Wiesbaden
+CREATED:20150306T111015Z
+CONTACT:kontakt@freifunk-wiesbaden.de\; http://wiesbaden.freifunk.net
+DESCRIPTION:Monatliches Treffen der Wiesbadener Freifunk-Community in den Raeumlichkeiten
+ des CCC ab 19:00 Uhr.\nCCCMZ e.V.\nSedanplatz 7\, 65183 Wiesbaden
+LAST-MODIFIED:20150306T111015Z
+GEO:+50.08317;+8.22951
+LOCATION:CCCMZ e.V. @ Sedanplatz 7\, 65183 Wiesbaden\, Deutschland
 SEQUENCE:0
 STATUS:CONFIRMED
-SUMMARY:Freifunk Wiesbaden Treffen
+SUMMARY:ffwi: Freifunk Treffen
+URL:http://wiesbaden.freifunk.net/treffen.html
 TRANSP:OPAQUE
 END:VEVENT
 END:VCALENDAR
