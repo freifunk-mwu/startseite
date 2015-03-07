@@ -3,7 +3,7 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
-FIRMWARE_REGEX = /^gluon-((\w+)-([\d\.]+)-[\w]+-([-\w\.]+)).bin$/
+FIRMWARE_REGEX = /^gluon-((\w+)-([\d\.]+)-\w*-*([-\w\.]+)).bin$/
 HWREV_REGEX = /^(.+)-(v|rev-)([\w\.]+)$/
 
 MODELMAP = {
