@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(\d\d\d\d)/(\d\d)/ping-wir-leben-noch/$ $1/$2/08/ping-wir-leben-noch.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/treffen-im-dezember/$ $1/$2/24/treffen-im-dezember.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/gluon-in-wiesbaden-geht-in-die-public-beta-phase/$ $1/$2/01/gluon-in-wiesbaden-geht-in-die-public-beta-phase.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/der-letzte-donnerstag-im-monat/$ $1/$2/23/der-letzte-donnerstag-im-monat.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/gesucht-wochentag-fur-regelmasige-treffen/$ $1/$2/26/gesucht-wochentag-fur-regelmasige-treffen.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/funftes-freifunk-treffen/$ $1/$2/18/funftes-freifunk-treffen.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/nodegame/$ $1/$2/07/nodegame.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/freifunkapi-changer/$ $1/$2/02/freifunkapi-changer.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/viertes-freifunk-treffen/$ $1/$2/10/viertes-freifunk-treffen.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/drittes-freifunk-treffen/$ $1/$2/12/drittes-freifunk-treffen.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/zweites-freifunk-treffen/$ $1/$2/06/zweites-freifunk-treffen.html [R,L]
+RewriteRule ^(\d\d\d\d)/(\d\d)/freifunk-wiesbaden-kickoff/$ $1/$2/29/freifunk-wiesbaden-kickoff.html [R,L]
