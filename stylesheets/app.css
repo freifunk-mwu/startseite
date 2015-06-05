@@ -98,3 +98,27 @@ h1 > .postdate {
 h1.postheading {
 	margin-top: 0;
 }
+
+
+/* -----------------------------------------
+   meshviewer node svgs
+----------------------------------------- */
+
+.node-alert {
+  -webkit-animation: blink 2s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation: blink 2s linear;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blink {
+  0%   { opacity: 1.0; }
+  80%  { opacity: 1.0; }
+  90%  { opacity: 0.0; }
+}
+
+@keyframes blink {
+  0%   { opacity: 1.0; }
+  80%  { opacity: 1.0; }
+  90%  { opacity: 0.0; }
+}
