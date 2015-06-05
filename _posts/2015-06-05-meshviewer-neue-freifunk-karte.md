@@ -118,7 +118,7 @@ Karten-Provider auswählen
     <text x="20" y="12">Online Knoten (älter als 14 Tage)</text>
   </svg>
   <br />
-  <svg height="23px" width="350px">
+  <svg height="23px" width="300px">
     <circle class="node-alert" cx="7" cy="7" r="6" stroke-linejoin="round" stroke-linecap="round" stroke="#D43E2A" stroke-opacity="0.8" stroke-width="2" fill="#D43E2A" fill-opacity="0.8" />
     <text x="20" y="12">Knoten Offline (nicht länger als 3 Tage)</text>
   </svg>
