@@ -19,6 +19,6 @@ Ob die Arbeiter auf der Baustelle der Rhein-Main-Hallen ebenfalls vom Freifunk p
 Auf dem [Kartenausschnitt](/images/blog/freifunk-herbert-anlage.png) ist die Abdeckung gut zu erkennen.
 {: .col-xs-12 .col-sm-6 .col-md-8}
 
-Auf der [Knoten-Karte](http://map.wiesbaden.freifunk.net/geomap.html) sind alle Freifunk-Knoten in Wiesbaden und Umgebung zu sehen - es werden immer mehr!
+Auf der [Knoten-Karte](http://map.wiesbaden.freifunk.net) sind alle Freifunk-Knoten in Wiesbaden und Umgebung zu sehen - es werden immer mehr!
 {: .col-xs-12 .col-sm-6 .col-md-8}
 

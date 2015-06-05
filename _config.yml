@@ -14,9 +14,7 @@ community:
   # Custom URLs
   url_wiki:  "http://wiki.freifunk-mainz.de"
   url_calendar:  "http://wiesbaden.freifunk.net/ffwi-calendar.ics"
-  url_geomap: "http://map.wiesbaden.freifunk.net/geomap.html"
-  url_graph: "http://map.wiesbaden.freifunk.net/graph.html"
-  url_nodelist: "http://map.wiesbaden.freifunk.net/list.html"
+  url_meshviewer: "http://map.wiesbaden.freifunk.net"
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/wiesbaden-freifunk.net"
   url_git: "http://github.com/freifunk-mwu"
 
