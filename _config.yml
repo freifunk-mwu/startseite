@@ -34,6 +34,8 @@ community:
 
 firmware:
   base: "http://firmware.wiesbaden.freifunk.net/stable/"
+  version: "0.1-stable"
+  prefix: "gluon-ffwi"
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
