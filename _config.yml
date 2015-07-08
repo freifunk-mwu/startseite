@@ -34,7 +34,7 @@ community:
 
 firmware:
   base: "http://firmware.wiesbaden.freifunk.net/stable/"
-  version: "0.1-stable"
+  version: "0.2-stable"
   prefix: "gluon-ffwi"
   type: "gluon"
 
