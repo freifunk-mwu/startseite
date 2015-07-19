@@ -75,6 +75,9 @@
           {% if site.community contains 'twitter' %}
           <strong>Twitter:</strong> <a href="https://twitter.com/{{ site.community.twitter }}">@{{ site.community.twitter }}</a><br/>
           {% endif %}
+          {% if site.community contains 'facebook' %}
+          <strong>Facebook:</strong> <a href="https://facebook.com/{{ site.community.facebook }}">{{ site.community.facebook }}</a><br/>
+          {% endif %}
           <a href="/impressum.html">Impressum</a>
         </p>
       </div>
