@@ -12,3 +12,7 @@ RewriteRule ^(\d\d\d\d)/(\d\d)/viertes-freifunk-treffen/$ $1/$2/10/viertes-freif
 RewriteRule ^(\d\d\d\d)/(\d\d)/drittes-freifunk-treffen/$ $1/$2/12/drittes-freifunk-treffen.html [R,L]
 RewriteRule ^(\d\d\d\d)/(\d\d)/zweites-freifunk-treffen/$ $1/$2/06/zweites-freifunk-treffen.html [R,L]
 RewriteRule ^(\d\d\d\d)/(\d\d)/freifunk-wiesbaden-kickoff/$ $1/$2/29/freifunk-wiesbaden-kickoff.html [R,L]
+
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
