@@ -85,6 +85,8 @@ GROUPS = {
       "Bullet M",
       "Loco M",
       "Nanostation M",
+      "Picostation M",
+      "Rocket M",
       "UniFi AP Pro",
       "UniFi",
       "UniFiAP Outdoor",
@@ -94,16 +96,14 @@ GROUPS = {
 
       if rev == '-xw'
         'XW'
-      elsif model == 'Nanostation M' or model == 'Bullet M'
+      elsif model == 'Nanostation M' or model == 'Bullet M' or model == 'Loco M' or
         'XM'
       else
         nil
       end
     },
     transform_label: lambda { |model|
-      if model == 'Bullet M' then
-        'Bullet M, Loco M'
-      elsif model == 'UniFi' then
+      if model == 'UniFi' then
         'UniFi AP (LR)'
       else
         model
