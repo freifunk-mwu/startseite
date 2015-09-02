@@ -11,7 +11,7 @@ Die [hessenschau](http://hessenschau.de/index.html), die Nachrichtensendung des 
 </div>
 <br/>
 
-In einer späteren Ausgabe der hessenschau wurde noch ein leicht anderer, [etwas längerer Beitrag](http://hessenschau.de/tv-sendung/video-2392.html) ausgestrahlt. Darin weisen wir auch darauf hin, dass Nutzer von offenen WLANs **immer** Verschlüsselung (z.B. SSL) nutzen sollten, wenn sie beispielsweise E-Mails abrufen und sensible Webseiten ansurfen.  
+In einer späteren Ausgabe der hessenschau wurde noch ein leicht anderer, etwas längerer Beitrag (leider nicht mehr online) ausgestrahlt. Darin weisen wir auch darauf hin, dass Nutzer von offenen WLANs **immer** Verschlüsselung (z.B. SSL) nutzen sollten, wenn sie beispielsweise E-Mails abrufen und sensible Webseiten ansurfen.  
 
 Doch nicht nur das Fernsehen, auch die Presse hat in den letzten Tagen positiv über uns berichtet. Der Wiesbadener Kurier schreibt: [Aus vielen Knoten wird ein Netz: Initiative Freifunk will kostenloses WLAN in Wiesbaden aufbauen](http://www.wiesbadener-kurier.de/lokales/wiesbaden/nachrichten-wiesbaden/aus-vielen-knoten-wird-ein-netz-initiative-freifunk-will-kostenloses-wlan-in-wiesbaden-aufbauen_15946139.htm), und das Stadtmagazin Sensor Wiesbaden: [Freifunk sorgt für freies WLAN in Wiesbaden – Gelungene Premiere beim Open-Air-Kino](http://www.sensor-wiesbaden.de/freifunk-sorgt-fuer-freies-wlan-in-wiesbaden-gelungene-premiere-beim-open-air-kino-heute-offenes-treffen-fuer-alle/).
 
