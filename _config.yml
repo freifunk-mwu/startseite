@@ -34,6 +34,10 @@ community:
   geo_lat: 50.08
   geo_lon: 8.22
 
+  # Donations
+  donation_iban: "DE41551900000654997014"
+  donation_bic: "MVBMDE55XXX"
+
 firmware:
   base: "http://firmware.wiesbaden.freifunk.net/stable/"
   version: "0.2.1-stable"
