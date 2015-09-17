@@ -127,3 +127,18 @@ div.mejs-container {
   margin: auto;
   text-align: center;
 }
+
+/* -----------------------------------------
+   inline definition list (for footer)
+----------------------------------------- */
+.inline-definition-list dt {
+  float: left;
+  clear: left;
+  width: 80px;
+  font-weight: bold;
+/*  text-align: right;*/
+}
+.inline-definition-list dd {
+  margin: 0 0 0 90px;
+  padding: 0 0 0.5em 0;
+}
