@@ -52,12 +52,15 @@ firmware:
 tld:
   label: "ffwi.org"
   ns:
-    - "10.56.0.5"
-    - "fd56:b4dc:4b1e::a38:5"
     - "10.56.0.7"
     - "fd56:b4dc:4b1e::a38:7"
     - "10.56.0.23"
     - "fd56:b4dc:4b1e::a38:17"
+    - "10.56.0.36"
+    - "fd56:b4dc:4b1e::a38:e7"
+    - "10.56.0.208"
+    - "fd56:b4dc:4b1e::a38:d0"
+
 
 collections:
   events:
