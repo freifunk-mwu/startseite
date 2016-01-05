@@ -13,7 +13,7 @@ community:
 
   # Custom URLs
   url_wiki:  "http://wiki.freifunk-mainz.de"
-  url_calendar:  "http://wiesbaden.freifunk.net/ffwi-calendar.ics"
+  url_calendar:  "/ffwi-calendar.ics"
   url_meshviewer: "https://map.wiesbaden.freifunk.net"
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/wiesbaden-freifunk.net"
   url_git: "http://github.com/freifunk-mwu"
@@ -60,7 +60,6 @@ tld:
     - "fd56:b4dc:4b1e::a38:e7"
     - "10.56.0.208"
     - "fd56:b4dc:4b1e::a38:d0"
-
 
 collections:
   events:
