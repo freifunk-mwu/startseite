@@ -31,7 +31,7 @@ Nur eine Woche später fand am selben Ort das [1. Wiesbadener Street Food Festiv
 
 ![Graph](/images/blog/graph_2015.png)
 
-Wie auf dem [Diagramm](images/globalGraph_365d.png) gut zu sehen ist, nahmen sowohl die Anzahl der Knoten als auch die Anzahl der Nutzer kontinuierlich zu. In der ersten Jahreshälfte kristallisierte sich ein &bdquo;harter Kern&ldquo; der Wiesbadener Freifunker heraus. Neben dem zentralen Kontaktmedium Mailingliste spielten insbesondere die regelmäßigen [monatlichen Treffen](http://wiesbaden.freifunk.net/treffen.html) eine herausragende Rolle.
+Wie auf dem [Diagramm](/images/blog/graph_2015.png) gut zu sehen ist, nahmen sowohl die Anzahl der Knoten als auch die Anzahl der Nutzer kontinuierlich zu. In der ersten Jahreshälfte kristallisierte sich ein &bdquo;harter Kern&ldquo; der Wiesbadener Freifunker heraus. Neben dem zentralen Kontaktmedium Mailingliste spielten insbesondere die regelmäßigen [monatlichen Treffen](http://wiesbaden.freifunk.net/treffen.html) eine herausragende Rolle.
 
 Im September trat eine Anwohnerin aus Nordenstadt auf uns zu und fragte an, ob wir nicht die Flüchtlingsnotunterkunft in der Taunushalle über ihren Internetanschluss mit Freifunk versorgen könnten. Natürlich konnten wir! Es folgten weitere Unterkünfte u. a. in Breckenheim, in Taunusstein-Wehen, sowie insbesondere die August-Herrmann-Francke-Schule und das Simeonhaus. Dabei wurden wir tatkräftig und finanziell unterstützt von Anwohnern, der Stadtentwicklungsgesellschaft, der Hochschule RheinMain, von Hilfsorganisationen (DRK, Malteser, Johanniter), von der Feuerwehr, vom Katastrophenschutz und von vielen Helfern und Spendern.
 
