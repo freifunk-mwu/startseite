@@ -6,8 +6,6 @@ end: 2016-02-25T22:00:00.00+01:00
 location: "Chaos Computer Club Mainz Wiesbaden"
 ---
 
-Wir treffen uns immer am 2. und am letzten Donnerstag im Monat.
-
 Ab 19 Uhr bieten wir Informationen und Hilfestellung für Freifunk-Neulinge an.
 Spätestens um 20:30 Uhr beginnen wir dann mit unserer Agenda.
 
