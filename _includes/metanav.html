@@ -1,0 +1,7 @@
+{% if site.data.nav.meta %}
+    <ul class="breadcrumbs">
+        {% for item in site.data.nav.meta %}
+            <li><a href="{{ item.href }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}
