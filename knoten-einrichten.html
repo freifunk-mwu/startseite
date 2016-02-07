@@ -12,169 +12,203 @@ layout: base
 
 <div class="row">
   <div class="twelve columns">
-    <p>Für die Einrichtung des Knotens werden keine technischen Kenntnisse benötigt. Wenn du dieser Anleitung Schritt
-    für Schritt folgst, kann eigentlich nichts schiefgehen. Anschließend läuft das Freifunk WLAN und ist für alle in
-    der Nähe als <strong>offenes WLAN mit der SSID "{{ site.community.ssid }}"</strong> zu sehen.</p>
+    <p>Die Einrichtung eines Freifunk-Knotens ist nicht schwer, das kann jeder! Alle Schritte, vom Router-Kauf über das Firmware-Flashen bis zum fertigen Freifunk-Knoten auf einen Blick:</p>
+    <div class="eight columns centered">
+      <table>
+        <thead>
+          <tr>
+            <th>Schritt</th>
+            <th>Beschreibung</th>
+            <th>Zeitaufwand</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a href="/anleitung.html">Router auswählen und kaufen</a></td>
+            <td>variiert je nach Verfügbarkeit</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="/firmware-einspielen.html">Firmware einspielen</a></td>
+            <td>ca. 15 Minuten</td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td><strong>Knoten einrichten</strong></td>
+            <td><strong>ca. 5 Minuten</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-    <p>
-    Die Knoten im Freifunk-Netz benutzen ein eigenes Betriebssystem.
-    Dieses sollte auf deinem Router installiert sein.
-    Ob das so ist, erfährst du von dem Freifunker, von dem du das Gerät bekommen hast.
-    Sollte auf deinem Knoten noch nicht das Freifunk-Betriebssystem installiert sein, findest du hier eine Schritt-für-Schritt-Anleitung.
-    </p>
+  <div class="twelve columns">
+    <h4>Schritt 3: Knoten einrichten</h4>
 
-    <h2>Knoten einrichten</h2>
+    <ul class="accordion">
+      <li>
+        <div class="title">
+          <h5>1: Konfigurationsseite öffnen</h5>
+        </div>
+        <div class="content">
+          <p>Rufe die folgende URL in einem Browser auf: <strong><a href="http://192.168.1.1">http://192.168.1.1</a></strong></p>
 
-    <h3>Schritt 1: Freifunk-Knoten mit dem Computer verbinden</h3>
+          <p class="text-center">
+            <img src="images/knoten-einrichten/wizard-start.png" />
+            <i>Config-Mode eines Freifunk-Knotens</i>
+          </p>
+        </div>
+      </li>
 
-    <figure>
-      <img src="images/firmware-einspielen/firmware-dev-overview.png" />
-      <figcaption>Deinem Knoten (2) liegen mindestens eine Antenne (1), ein Steckernetzteil (3) und ein LAN-Kabel (4) bei.</figcaption>
-    </figure>
+      <li>
+        <div class="title">
+          <h5>2: Knotenname</h5>
+        </div>
+        <div class="content">
+          <p>
+            Als Erstes gibst du deinem Knoten einen Namen.
+            Nimm einen, der dir gefällt und der vielleicht ein wenig über den Standort des Knotens aussagt.
+            Bitte beachte, dass keine Sonderzeichen außer der Bindestrich im Namen erlaubt sind.
+            Wenn du ein Leerzeichen brauchst, verwende einen Bindestrich.
+          </p>
 
-    <p>
-    Bitte schraube zuerst die Antenne(n) auf die Gewindestecker des Knotens.
-    Schließe danach den Knoten mit dem Steckernetzteil an eine Steckdose an.
-    Verbinde das Gerät anschließend mit dem beiliegenden LAN-Kabel (4) mit deinem Computer.
-    Am Knoten verwendest du dazu eine gelbe Buchse, an deinem Rechner den Netzwerkanschluss.
-    </p>
+          <p class="text-center">
+            <img src="images/knoten-einrichten/wizard-hostname.png" />
+          </p>
+        </div>
+      </li>
 
-    <figure>
-      <img src="images/knoten-einrichten/image3458.png" />
-      <figcaption>Zur Einrichtung: Gelbe Buchse benutzen. <strong>Ausnahme beim TL-WR841ND:</strong> Blaue Buchse!</figcaption>
-    </figure>
+      <li>
+        <div class="title">
+          <h5>3: Mesh-VPN</h5>
+        </div>
+        <div class="content">
+          <p>
+            Wenn keine anderen Knoten in WLAN Reichweite sind, setze nun einen Haken hinter <em>"Mesh-VPN aktivieren"</em>,
+            um eine verschlüsselte Verbindung über deinen Internet-Router zu den Freifunk-Servern herzustellen.
+            Die Freifunk-Server verbinden deinen Freifunk-Knoten über das Internet mit allen anderen Teilen des Freifunk-Netzes,
+            die nicht über WLAN erreicht werden. Wenn diese Option nicht aktiviert wird kann dein Knoten nur über einen weiteren
+            Freifunk Knoten, der in WLAN Reichweite steht, eine Verbindung zum Freifunk-Netz aufbauen.
+            Der Zugang zum Internet ist dann nur möglich, wenn mindestens bei einem der erreichbaren Knoten diese Option aktiviert ist.
+          </p>
 
-    <h3>Schritt 2: Konfiguration starten</h3>
+          <p class="text-center">
+            <img src="images/knoten-einrichten/wizard-meshvpn.png" />
+          </p>
 
-    <p>
-    Jetzt kannst du den Knoten über den Browser konfigurieren.
-    Dazu rufst du in deinem Browser folgende Adresse auf:
-    </p>
+          <p>
+            Optional kannst du die Bandbreite, die von deinem Internet-Anschluss maximal benutzt werden soll, fest limitieren.
+            Willst du die Bandbreit limitieren, setze den Haken "Mesh-VPN Bandbreite begrenzen" und trage in die beiden Felder
+            darunter die gewünschten Limits ein. Die Minimalwerte sind 1000 im oberen und 100 im unteren Feld.
+          </p>
+        </div>
+      </li>
 
-    <p><strong>http://192.168.1.1</strong></p>
+      <li>
+        <div class="title">
+          <h5>4: Standort</h5>
+        </div>
+        <div class="content">
+          <p>
+            Wenn du möchtest, dass du und andere Mitmenschen den Standort deines Knotens in der <a href="{{ site.community.url_meshviewer }}">Freifunk-Karte</a> sehen können,
+            dann musst du hier ein Häkchen setzen und in die rot unterlegten Felder Geo-Koordinaten eintragen. Die erforderlichen Werte für den Breiten- und Längengrad kannst du
+            auf unserer <a href="{{ site.community.url_meshviewer }}">Freifunk-Karte</a> mit Hilfe des Stecknadel Buttons ermitteln.
+            Die Geo-Koordinaten werden dir in einem kleinen Popup-Fenster angezeigt.
+          </p>
 
-    <p>Dein Browserfenster sieht nun ungefähr so aus, wie im folgenden Bild. </p>
+          <p class="text-center">
+            <img src="images/knoten-einrichten/wizard-standort.png" />
+          </p>
+        </div>
+      </li>
 
-    <figure>
-      <img src="images/knoten-einrichten/wizard-start.png" />
-    </figure>
+      <li>
+        <div class="title">
+          <h5>5: Kontakt</h5>
+        </div>
+        <div class="content">
+          <p>
+            Um einen Knoten-Betreiber erreichen zu können, braucht die Gemeinschaft eine Kontakt-Möglichkeit.
+            Du kannst dazu in diesem Feld beispielsweise eine E-Mail Adresse eintragen oder einen Namen, der dir von
+            anderen aktiven Freifunkern zugeordnet werden kann. Beachte, dass die Kontaktdaten,
+            die du hier eingibts, öffentlich zugänglich sind.
+            Wenn Du magst, kannst du hier mehrere Werte eintragen. Trenne diese bitte mit einem Komma.
+            Wenn du unsicher bist, dann lass dieses Feld leer. Du kannst das später noch ändern.
+          </p>
 
-    <h3>Schritt 3: Knotenname</h3>
+          <p class="text-center">
+            <img src="images/knoten-einrichten/wizard-kontakt.png" />
+          </p>
+        </div>
+      </li>
 
-    <p>Als Erstes gibst du deinem Knoten einen Namen.
-    Nimm einen, der dir gefällt und der vielleicht ein wenig über den Standort des Knotens aussagt. z.B. <em>FreeWayLan</em>.
-    Bitte achte darauf, dass keine Sonderzeichen außer der Bindestrich im Namen erlaubt sind.
-    Wenn du ein Leerzeichen brauchst, verwende einen Bindestrich.
-    </p>
+      <li>
+        <div class="title">
+          <h5>6: Knoten bekanntmachen</h5>
+        </div>
+        <div class="content">
+          <p>Klicke auf <em>Speichern & Neustarten</em>.</p>
 
-    <figure>
-      <img src="images/knoten-einrichten/wizard-hostname.png" />
-      <figcaption>Feld zum Eintragen des Namens.</figcaption>
-    </figure>
+          <p class="text-center">
+            <img src="images/knoten-einrichten/wizard-fertig.png" />
+          </p>
 
-    <h3>Schritt 4: Mesh-VPN</h3>
+          <p>
+            Die nun erscheinende Seite fasst zusammen, was du als Nächstes tun solltest.
+            Hast du in Schritt 3 das Mesh-VPN aktiviert, zeigt die Seite wie in der Abbildung
+            einen eingerahmten Block an, welcher deinen Knoten Namen und einen VPN-Schlüssel enthält.
+            Sende den Inhalt dieses Blocks an <a href="mailto:{{ site.community.mail_keys }}">{{ site.community.mail_keys }}</a>.
+            Wenn du auf die als Link angezeigte E-Mail Adresse klickst öffnet sich automatisch dein E-Mail Programm mit einer neuen E-Mail, die alle erforderlichen Werte schon vorausgefüllt hat.
+          </p>
 
-    <p>Wenn keine anderen Knoten in WLAN Reichweite sind, setze nun einen Haken hinter <em>"Mesh-VPN aktivieren"</em>,
-    um eine verschlüsselte Verbindung über deinen Internet-Router zum Freifunk-Server herzustellen.
-    Der Freifunk-Server verbindet deinen Freifunk-Knoten über das Internet mit allen anderen Teilen des Freifunk-Netzes,
-    die nicht über WLAN erreicht werden. Wenn diese Option nicht aktiviert wird kann der Knoten nur mit den Knoten kommunizieren,
-    die er direkt oder indirekt per WLAN oder über andere Knoten mit aktivierter Option erreicht. Der Zugang zum Internet ist
-    dann nur möglich, wenn mindestens bei einem der erreichbaren Knoten diese Option aktiviert ist.
-    Beim Aktivieren wird die Option <em>"Mesh-VPN Bandbreite begrenzen"</em> sichtbar.</p>
+          <p>Es kann eine Weile dauern, bis dein Knoten die Verbindung zum Freifunk-Netz aufbaut, da der Schlüssel manuell eingetragen werden muss.</p>
 
-    <figure>
-      <img src="images/knoten-einrichten/wizard-meshvpn.png" />
-    </figure>
+          <p>
+            Hast du Mesh-VPN nicht aktiviert, werden diese Daten nicht angezeigt und du brauchst keine Mail versenden.
+            Wenn du möchtest, kannst du dich und deinen neuen Knoten aber trotzdem gerne auf unserer
+            Mailingliste <a href="{{ site.community.url_mailman }}">{{ site.community.mail_discussion }}</a> bekannt machen.
+          </p>
 
-    <h4>Option: Bandbreitenbegrenzung</h4>
+          <p class="text-center">
+            <img src="images/knoten-einrichten/wizard-geschafft.png" />
+          </p>
+        </div>
+      </li>
 
-    <p>Wenn du einen normalen Internet-Anschluss hast, brauchst du die Begrenzung nicht zu aktivieren. Dein Knoten
-    wird im alltäglichen Betrieb nicht allzu viel von deiner Bandbreite in Anspruch nehmen. Unsere Empfehlung ist
-    deshalb, die Begrenzung nicht zu aktivieren. Solltest du aber trotzdem eine Begrenzung eintragen wollen, setze
-    den Haken "Mesh-VPN Bandbreite begrenzen" und trage in die beiden Felder darunter die gewünschten Limits
-    ein. Die Minimalwerte sind 1000 im oberen und 100 im unteren Feld.</p>
+      <li>
+        <div class="title">
+          <h5>7: Knoten ans Internet anschließen</h5>
+        </div>
+        <div class="content">
+          <p>
+            Nun kannst du den Knoten ans Internet anschließen. Dazu musst du das LAN-Kabel auf der Rückseite deines
+            Knoten umstecken: Bisher hattest du das Kabel im LAN-Port (gelb). Jetzt muss es in den WAN-Port (blau). Verbinde
+            dann noch das andere Ende des Kabels mit deinem Internet-Router und dein neuer Freifunk-Knoten ist am Netz.
+          </p>
 
-    <h3>Schritt 5: Standort</h3>
+          <p class="text-center">
+            <img src="images/knoten-einrichten/g4007.png" />
+          </p>
 
-    <p>Wenn du möchtest, dass du und andere Mitmenschen den Standort deines Knotens in der <a href="{{ site.community.url_meshviewer }}">Freifunk-Karte</a> sehen können,
-    dann musst du hier ein Häkchen setzen und in die rot unterlegten Felder Geo-Koordinaten eintragen. Die erforderlichen Werte für den Breiten- und Längengrad kannst du
-    mit Hilfe von <a href="https://www.google.de/maps">Google Maps</a> ermitteln. Klicke einfach mit der rechten Maus-Taste auf die gewünschte Stelle in der Karte und wähle <em>Was ist hier?</em> aus. Die Geo-Koordinaten werden daraufhin oben Links unter der Adresse angezeigt. 
-    </p>
-
-    <figure>
-      <img src="images/knoten-einrichten/wizard-standort.png" />
-    </figure>
-
-    <h3>Schritt 6: Kontakt</h3>
-
-    <p>Um einen Knoten-Betreiber erreichen zu können, braucht die Gemeinschaft eine Kontakt-Möglichkeit.
-       Du kannst dazu in diesem Feld beispielsweise eine E-Mail Adresse eintragen oder einen Namen, der dir von
-       anderen aktiven Freifunkern zugeordnet werden kann. Beachte, dass die Kontaktdaten,
-       die du hier eingibts, im gesamten Freifunk-Netz (nicht Internet!) zugänglich sind.
-       Wenn Du magst, kannst du hier mehrere Werte eintragen. Trenne diese bitte mit einem Komma.
-       Wenn du unsicher bist, dann lass dieses Feld leer. Du kannst das später noch ändern.
-    </p>
-
-    <figure>
-      <img src="images/knoten-einrichten/wizard-kontakt.png" />
-    </figure>
-
-    <h3>Schritt 7: Knoten bekanntmachen</h3>
-
-    <p>Klicke auf <em>Fertig</em>.</p>
-
-    <figure>
-      <img src="images/knoten-einrichten/wizard-fertig.png" />
-    </figure>
-
-    <p>
-    Die nun erscheinende Seite fasst zusammen, was du als nächstes tun solltest.
-    Hast du in Schritt 4 das Mesh-VPN aktiviert, zeigt die Seite wie in der Abbildung
-    einen eingerahmten Block an, welcher deinen Knoten Namen und einen VPN-Schlüssel enthält.
-    Sende den Inhalt dieses Blocks an <a href="mailto:{{ site.community.mail_keys }}">{{ site.community.mail_keys }}</a>.
-    </p>
-
-    <p>Es kann eine Weile dauern, bis dein Knoten die Verbindung zum Freifunk-Netz aufbaut, da der Schlüssel manuell eingetragen werden muss.</p>
-
-    <p>
-    Hast du Mesh-VPN nicht aktiviert, werden diese Daten nicht angezeigt und du brauchst keine Mail versenden.
-    Wenn du möchtest, kannst du dich und deinen neuen Knoten aber trotzdem gerne auf unserer
-    Mailingliste <a href="{{ site.community.url_mailman }}">{{ site.community.mail_discussion }}</a> bekannt machen.
-    </p>
-
-    <figure>
-      <img src="images/knoten-einrichten/wizard-geschafft.png" />
-    </figure>
-
-    <p>Dein Knoten ist nun fertig eingerichtet und startet bereits neu.</p>
-
-    <h3>Schritt 8: Knoten ans Internet anschließen</h3>
-
-    <p>Nun kannst du den Knoten ans Internet anschließen. Dazu musst du das LAN-Kabel auf der Rückseite deines
-    Knoten umstecken: Bisher hattest du das Kabel in der gelben Buchse. Jetzt muss es in die blaue. Verbinde
-    dann noch das andere Ende des Kabels mit deinem Internet-Router und dein neuer Freifunk-Knoten ist am Netz.</p>
-
-    <figure>
-      <img src="images/knoten-einrichten/g4007.png" />
-      <figcaption>Dieses Mal gehört das Kabel bei allen TP-Link Modellen in die <strong>blaue</strong> Buchse.</figcaption>
-    </figure>
-
-    <p>Alternativ kannst du deinen Knoten auch nur zum Meshing verwenden. Dazu muss allerdings mindestens ein
-    anderer Freifunk-Knoten in WLAN-Reichweite sein. Wenn einer der Knoten in dem Mesh-Netzwerk eine
-    Internet-Verbindung hat, wird diese mit deinem Knoten geteilt.</p>
-
-    <h2>Fragen?</h2>
-
-    <p>Solltest du Fragen oder Probleme haben, kannst du dich gerne an uns wenden. Kontakt-Möglichkeiten sind ganz unten auf dieser Seite zu finden.</p>
-
-    <h2>Noch ein wichtiger Hinweis zum Schluss</h2>
-
-    <p>
-    Das Freifunk-Netz wird getunnelt. Daher ist es Diensten wie Facebook, Googlemail usw. in vielen Fällen nicht möglich, zu ermitteln, wo du dich befindest. Das hilft deine Privatsphäre zu schützen, und zwar auch im Hinblick auf die sogenannte Störerhaftung.
-    </p>
-
-    <p>
-    In solchen Fällen siehst du eventuell Meldungen, in denen behauptet wird, du wärest im Ausland - was ja schon nichts Schlechtes wäre - und in denen manchmal von „Hackerangriffen“ die Rede ist. Erschrick nicht. Diese Meldungen sind bei Verwendung des Freifunks völlig normal (und bei Verwendung anderer Netze gegebenenfalls sogar wichtig).
-    </p>
+          <p>
+            Wie unter Schritt 6 schon beschrieben brauchst du deinen Freifunk-Knoten nicht mit deinem Internet-Router
+            zu verbinden, wenn du ihn als "Mesh-Only Knoten" betreiben willst. Du hast z.B. schon einen Freifunk-Knoten,
+            der mit deinem Internet-Router verbunden ist und möchtest das Freifunk Signal erweitern.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="title">
+          <h5>Fragen?</h5>
+        </div>
+        <div class="content">
+          <p>Solltest du Fragen oder Probleme haben, kannst du dich gerne an uns wenden. Kontakt-Möglichkeiten sind ganz unten auf dieser Seite zu finden.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="twelve columns">
+    <a class="primary button left" href="/firmware-einspielen.html">Zurück zu "Firmware einspielen"</a>
   </div>
 </div>

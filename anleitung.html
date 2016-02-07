@@ -12,135 +12,75 @@ layout: base
 </div>
 
 <div class="row">
-  <div class="eight columns">
-    <h3>1. Router auswählen und besorgen</h3>
-    <p>Du benötigst einen Router, der von der Freifunk Firmware unterstützt wird. Wähle ein unterstütztes Modell aus unserer <a href="/firmware.html">Firmware-Tabelle</a> und kaufe dieses bei einem Händler deiner Wahl. Wenn du dir nicht sicher bist, welches Modell für dich geeignet ist, frage entweder bei uns nach oder nehme eines der empfohlenen Modelle.</p>
-
-    <div class="panel">
-      <p><strong>Aktuell kann man bei uns leider keine Router zum Selbstkostenpreis abholen.</strong></p>
+  <div class="twelve columns">
+    <p>Die Einrichtung eines Freifunk-Knotens ist nicht schwer, das kann jeder! Alle Schritte, vom Router-Kauf über das Firmware-Flashen bis zum fertigen Freifunk-Knoten auf einen Blick:</p>
+    <div class="eight columns centered">
+      <table>
+        <thead>
+          <tr>
+            <th>Schritt</th>
+            <th>Beschreibung</th>
+            <th>Zeitaufwand</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1</strong></td>
+            <td><strong>Router auswählen und kaufen</strong></td>
+            <td><strong>variiert je nach Verfügbarkeit</strong></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="/firmware-einspielen.html">Firmware einspielen</a></td>
+            <td>ca. 15 Minuten</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="/knoten-einrichten.html">Knoten einrichten</a></td>
+            <td>ca. 5 Minuten</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 
-    <h5>Empfohlene Modelle</h5>
+  <div class="twelve columns">
+    <h4>Schritt 1: Router auswählen und kaufen</h4>
 
-    <dl class="tabs">
-      <dd class="active"><a href="#simple1">Indoor</a></dd>
-      <dd><a href="#simple2">Outdoor</a></dd>
-      <dd><a href="#simple3">Richtfunk</a></dd>
-    </dl>
-    <ul class="tabs-content">
-      <li class="active" id="simple1Tab">
-        <table>
-          <thead>
-            <tr>
-              <th>Modell</th>
-              <th>Merkmale</th>
-              <th>Preis</th>
-              <th>Hersteller-Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>TP-Link TL-WR1043ND</td>
-              <td>2,4 GHz, 720 MHz CPU, 64MB RAM</td>
-              <td>~40 &euro;</td>
-              <td><a href="http://www.tp-link.de/products/details/?categoryid=&model=TL-WR1043ND" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>TP-Link TL-WDR4300</td>
-              <td>2,4 & 5 GHz, 560 MHz CPU, 128 MB RAM</td>
-              <td>~50 &euro;</td>
-              <td><a href="http://www.tp-link.de/products/details/?categoryid=&model=TL-WDR4300" target="_blank">Link<a></td>
-            </tr>
-          </tbody>
-        </table>
+    <ul class="accordion">
+      <li>
+        <div class="title">
+          <h5>Router auswählen</h5>
+        </div>
+        <div class="content">
+          <p>
+            Du benötigst einen Router, der von der <span class="has-tip" title="Betriebssystem für Router">Freifunk Firmware</span> unterstützt wird.
+            Wähle ein unterstütztes Router-Modell aus unserer <strong><a href="/firmware.html">Firmware-Tabelle</a></strong>.
+            Wenn du dir nicht sicher bist, welches Modell für dich geeignet ist, wähle eines der empfohlenen Modelle.
+          </p>
+
+          <h6>Empfohlene Router-Modelle</h6>
+
+{% include choose_router.html %}
+
+        </div>
       </li>
-      <li id="simple2Tab">
-        <table>
-          <thead>
-            <tr>
-              <th>Modell</th>
-              <th>Merkmale</th>
-              <th>Preis</th>
-              <th>Hersteller-Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>TP-Link CPE210</td>
-              <td>2,4 GHz Sektorantenne, H 65° / E 35°, PoE + Passtrough</td>
-              <td>~50 &euro;</td>
-              <td><a href="http://www.tp-link.de/products/details/?categoryid=&model=CPE210" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti Nanostation NSM2</td>
-              <td>2,4 GHz Sektorantenne 11 dBi Gain, H 55° / V 53° / E 27°, PoE + Passtrough</td>
-              <td>~50 &euro;</td>
-              <td><a href="https://www.ubnt.com/airmax/nanostationm/" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti Nanostation locoM2</td>
-              <td>2,4 GHz Sektorantenne 8 dBi Gain, H 60° / V 60° / E 60°, PoE</td>
-              <td>~50 &euro;</td>
-              <td><a href="https://www.ubnt.com/airmax/nanostationm/" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti UniFi AP Outdoor+</td>
-              <td>2,4 GHz Rundstrahler, PoE</td>
-              <td>~160 &euro;</td>
-              <td><a href="https://www.ubnt.com/unifi/unifi-ap-outdoor/" target="_blank">Link<a></td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li id="simple3Tab">
-        <p>
-          <strong>Wichtig: Diese Geräte müssen aufgrund der Vorschriften für das 5 GHz Frequenzband in Deutschland mit der original Hersteller Firmware betrieben werden.</strong>
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Modell</th>
-              <th>Merkmale</th>
-              <th>Preis</th>
-              <th>Hersteller-Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>TP-Link CPE510</td>
-              <td>5 GHz Sektorantenne, H 45° / E 30°, PoE + Passtrough</td>
-              <td>~50 &euro;</td>
-              <td><a href="http://www.tp-link.de/products/details/?categoryid=&model=CPE510" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti Nanostation NSM5</td>
-              <td>2,4 GHz Sektorantenne 14.6-16.1 dBi Gain, H 43° / V 41° / E 15°, PoE + Passtrough</td>
-              <td>~80 &euro;</td>
-              <td><a href="https://www.ubnt.com/airmax/nanostationm/" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti Nanostation locoM5</td>
-              <td>2,4 GHz Sektorantenne 13 dBi Gain, H 45° / V 45° / E 45°, PoE</td>
-              <td>~65 &euro;</td>
-              <td><a href="https://www.ubnt.com/airmax/nanostationm/" target="_blank">Link<a></td>
-            </tr>
-          </tbody>
-        </table>
+      <li>
+        <div class="title">
+          <h5>Router kaufen</h5>
+        </div>
+        <div class="content">
+
+{% include get_router.html %}
+
+        </div>
       </li>
     </ul>
   </div>
 </div>
 
 <div class="row">
-  <div class="eight columns">
-    <h3>2. Firmware einspielen</h3>
-    <p>Nachdem du nun deinen Router vor dir hast muss unsere Freifunk-Firmware aufgespielt werden. Folge dazu bitte unserer <a href="/firmware-einspielen.html">Anleitung zum Firmware einspielen</a>.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="eight columns">
-    <h3>3. Knoten einrichten</h3>
-    <p>Nun hast du es fast geschafft. Unsere Freifunk-Firmware ist installiert und wartet jetzt auf ein paar Eingaben von dir. Folge dazu bitte unserer <a href="/knoten-einrichten.html">Anleitung zum Knoten einrichten</a>.</p>
+  <div class="twelve columns">
+    <a class="primary button right" href="/firmware-einspielen.html">Weiter zu "Firmware einspielen"</a>
   </div>
 </div>
