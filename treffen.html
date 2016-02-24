@@ -19,18 +19,12 @@ layout: base
 
 <div class="row">
   <div class="eight columns">
-    <p>Wenn dich Freifunk interessiert, laden wir dich hiermit ein, uns unkompliziert kennen zu lernen. Wir treffen uns immer am zweiten und am letzten Donnerstag im Monat.</p>
-    <p>Unser nächstes Treffen:</p>
-    {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
-    {% for event in site.events %}
-    {% capture posttime %}{{event.start | date: '%s'}}{% endcapture %}
-    {% if posttime > nowunix and printed == null %}
-      <h2><a href="{{ event.url }}">{{ event.start | localize: "%d. %B %Y, %H:%M" }} Uhr</a></h2>
-      <p><strong>{{ event.location }}</strong></p>
-      <p>{{ event.content }}</p>
-      {% capture printed %}true{% endcapture %}
-    {% endif %}
-    {% endfor %}
+      <p>Wenn dich Freifunk interessiert, laden wir dich hiermit ein, uns unkompliziert kennen zu lernen. Wir treffen uns immer am zweiten und am letzten Donnerstag im Monat.</p>
+      <p>Unser nächstes Treffen:</p>
+      {% assign currentEvent = site.data.currentEvent %}
+      <h2><a href="{{ currentEvent.url }}">{{ currentEvent.start | localize: "%d. %B %Y, %H:%M" }} Uhr</a></h2>
+      <p><strong>{{ currentEvent.location }}</strong></p>
+      <p>{{ currentEvent.content }}</p>
   </div>
   <!--<div class="one column">-->
     <!--<a href="javascript:cal.download()">iCal</a>-->
