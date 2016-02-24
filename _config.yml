@@ -1,6 +1,7 @@
 safe: false
 url: http://wiesbaden.freifunk.net
 baseurl: /
+lang: de
 
 community:
   # Metadata
