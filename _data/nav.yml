@@ -15,9 +15,9 @@ section:
   - title: "Mitmachen"
     href: ""
     dropdown:
-      - title: "Anleitung"
+      - title: "Freifunk-Knoten betreiben"
         href: "anleitung.html"
-      - title: "Community"
+      - title: "Mitarbeit in der Community"
         href: "mitmachen.html"
   - title: "Technik"
     href: ""
