@@ -82,6 +82,11 @@ h1 > .postdate {
   font-style: italic;
 }
 
+div.heading .postdate {
+	padding: 1em 0 .5em 0;
+	display: block;
+}
+
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */
@@ -134,11 +139,12 @@ div.mejs-container {
 /* <nav> */
 .top-bar { background: transparent; height: 35px; line-height: 35px; }
 .top-bar ul, .top-bar ul li { background-color: #dc0067; height: auto; }
+.top-bar ul > li a:not(.button) { color: #ffffff; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; }
 .top-bar ul > li:hover, .top-bar ul > li:active { background-color: #900043; }
 .top-bar ul > li.has-dropdown .dropdown { background-color: #dc0067; padding-top: 0; min-width: 100%; }
 .top-bar ul > li.has-dropdown .dropdown li { background-color: #dc0067; padding-bottom: 5px; padding-top: 5px; }
 .top-bar ul > li.has-dropdown .dropdown li:hover, .top-bar ul > li.has-dropdown .dropdown li a:hover { background-color: #900043; width: 100%; }
-.top-bar ul > li:hover a, .top-bar ul > li.active a { color: #ffffff; }
+.top-bar ul > li:hover a, .top-bar ul > li.active a { color: #ffffff; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; }
 
 /* Mobile Styles */
 @media only screen and (max-width: 940px) {
@@ -169,3 +175,25 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus { text-decoration: underlin
 ul.breadcrumbs li.current:hover a, ul.breadcrumbs li.current a:focus { text-decoration: none; }
 ul.breadcrumbs li.unavailable a { color: #999; }
 ul.breadcrumbs li.unavailable:hover a, ul.breadcrumbs li.unavailable a:focus { text-decoration: none; color: #999; cursor: default; }
+
+/* Accordion Tabs ---------------------- */
+ul.accordion > li .title:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: solid 6px;
+	border-color: #6b5500 transparent transparent transparent;
+}
+
+ul.accordion > li.active .title:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: solid 6px;
+	border-color: transparent transparent #6b5500 transparent;
+	position: absolute;
+	right: 15px;
+	top: 13px;
+}

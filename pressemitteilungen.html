@@ -1,0 +1,26 @@
+---
+layout: base
+---
+<div class="heading">
+    <div class="row">
+        <div class="twelve columns">
+            <h1>Pressemitteilungen</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="twelve columns">
+        {% assign pms = site.pressemitteilungen | sort: 'date' | reverse %}
+        {% for pm in pms %}
+            <div class="panel">
+                <h3><a href="{{ pm.url }}">{{ pm.title }}</a></h3>
+                <p class="postdate"><em>{{ pm.date | localize: "%d. %B %Y" }}</em></p>
+                <p>{{ pm.excerpt | strip_html }}
+                    <br/>
+                    <a href="{{ pm.url }}">mehr..</a>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+</div>

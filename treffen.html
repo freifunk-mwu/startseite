@@ -20,13 +20,36 @@ layout: base
 <div class="row">
   <div class="eight columns">
       <p>Wenn dich Freifunk interessiert, laden wir dich hiermit ein, uns unkompliziert kennen zu lernen. Wir treffen uns immer am zweiten und am letzten Donnerstag im Monat.</p>
-      <p>Unser nächstes Treffen:</p>
-      {% assign currentEvent = site.data.currentEvent %}
-      <h2><a href="{{ currentEvent.url }}">{{ currentEvent.start | localize: "%d. %B %Y, %H:%M" }} Uhr</a></h2>
-      <p><strong>{{ currentEvent.location }}</strong></p>
-      <p>{{ currentEvent.content }}</p>
+      <div class="callout panel radius">
+      {% include current_event.html %}
+      </div>
   </div>
   <!--<div class="one column">-->
     <!--<a href="javascript:cal.download()">iCal</a>-->
   <!--</div>-->
+</div>
+
+<div class="row">
+    <h3>Weitere Termine</h3>
+    <table class="twelve">
+        <thead>
+        <tr>
+            <th>Was</th>
+            <th>Wann</th>
+            <th>Wo</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for event in site.data.upcomingEvents %}
+                {% if forloop.index0 == 0 %}{% continue %}{% endif %}
+                <tr>
+                    <td><strong>{{ event.title }}</strong></td>
+                    <td>{{ event.start | localize: "%d. %B %Y, %H:%M" }} Uhr</td>
+                    <td>
+                        {% if event.locationurl %}<a href="{{ event.locationurl }}">{% endif %}{{ event.location }}{% if event.locationurl %}</a>{% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
