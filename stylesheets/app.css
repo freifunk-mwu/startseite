@@ -197,3 +197,11 @@ ul.accordion > li.active .title:after {
 	right: 15px;
 	top: 13px;
 }
+
+table.router {
+	width: 100%;
+}
+
+table.router td {
+	min-width: 5em;
+}
