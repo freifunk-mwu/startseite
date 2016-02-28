@@ -47,13 +47,13 @@
 @media only screen and (max-width: 570px) {
   div.header {
     background: transparent !important;
-    min-height: 0px;
+    min-height: 0;
   }
 }
 
-.firmwarelist {
-	min-width:90%;
-}
+/*.firmwarelist {*/
+	/*min-width:90%;*/
+/*}*/
 
 footer {
   background: #fafafa;
@@ -112,12 +112,12 @@ h1.postheading {
    meshviewer node svgs
 ----------------------------------------- */
 
-.node-alert {
-  -webkit-animation: blink 2s linear;
-  -webkit-animation-iteration-count: infinite;
-  animation: blink 2s linear;
-  animation-iteration-count: infinite;
-}
+/*.node-alert {*/
+  /*-webkit-animation: blink 2s linear;*/
+  /*-webkit-animation-iteration-count: infinite;*/
+  /*animation: blink 2s linear;*/
+  /*animation-iteration-count: infinite;*/
+/*}*/
 
 @-webkit-keyframes blink {
   0%   { opacity: 1.0; }
@@ -204,4 +204,10 @@ table.router {
 
 table.router td {
 	min-width: 5em;
+}
+
+@media only screen and (max-width: 767px) {
+	.tabs-content {
+		clear: both;
+	}
 }
