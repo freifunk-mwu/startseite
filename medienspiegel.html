@@ -4,14 +4,14 @@ layout: base
 <div class="heading">
     <div class="row">
         <div class="twelve columns">
-            <h1>Freifunk Wiesbaden in der Presse</h1>
+            <h1>Freifunk Wiesbaden in den Medien</h1>
         </div>
     </div>
 </div>
 
 <div class="row">
     <div class="twelve columns">
-        {% assign articles = site.data.pressespiegel | sort: 'date' | reverse %}
+        {% assign articles = site.data.medienspiegel | sort: 'date' | reverse %}
         {% for article in articles %}
             <div class="panel">
                 <p><span class="secondary label">{{ article.medium }}</span> vom {{ article.date | localize: "%d. %B %Y" }}</p>
