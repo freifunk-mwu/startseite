@@ -3,6 +3,7 @@
         <li><a href="{{ site.data.nav.root.href }}">{{ site.data.nav.root.title }}</a></li>
         <li class="toggle-topbar"><a href="#"></a></li>
     </ul>
+    <section>
     <ul class="left">
         {% for item in site.data.nav.section %}
             <li{% if item.dropdown %} class="has-dropdown"{% endif %}>
@@ -17,4 +18,5 @@
             </li>
         {% endfor %}
     </ul>
+    </section>
 </nav>
