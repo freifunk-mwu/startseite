@@ -211,3 +211,26 @@ table.router td {
 		clear: both;
 	}
 }
+
+/* Trying to add .toggle-topbar a span */
+@media only screen and (max-width: 940px) {
+	/*.top-bar ul li.toggle-topbar a span {*/
+		/*position: absolute;*/
+		/*right: 0;*/
+		/*width: 55px;*/
+		/*margin-top: -26px;*/
+	/*}*/
+
+	.top-bar.expanded ul li.toggle-topbar,
+	.top-bar ul li.toggle-topbar:hover {
+		background: #dc0067 !important;
+	}
+
+	/*.top-bar ul li.toggle-topbar:hover a > span {*/
+		/*margin-top: -26px;*/
+	/*}*/
+
+	/*.top-bar.expanded ul li.toggle-topbar:hover a span {*/
+		/*margin-top: -18px;*/
+	/*}*/
+}
