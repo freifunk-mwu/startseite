@@ -13,8 +13,10 @@ layout: base
 
 <div class="row">
     <div class="twelve columns">
-        <p>Die Einrichtung eines Freifunk-Knotens ist nicht schwer, das kann jeder! Alle Schritte, vom Router-Kauf über
-            das Firmware-Flashen bis zum fertigen Freifunk-Knoten auf einen Blick:</p>
+        <p>
+            Die Einrichtung eines Freifunk-Knotens ist nicht schwer, das kann jeder! Alle Schritte, vom Router-Kauf über
+            das Firmware-Flashen bis zum fertigen Freifunk-Knoten auf einen Blick:
+        </p>
 
         <dl class="tabs">
             <dd class="active"><a href="#router">1. Router auswählen und kaufen</a></dd>
@@ -33,12 +35,10 @@ layout: base
                             </div>
                             <div class="content">
                                 <p>
-                                    Du benötigst einen Router, der von der <span class="has-tip"
-                                                                                 title="Betriebssystem für Router">Freifunk Firmware</span>
+                                    Du benötigst einen Router, der von der <span class="has-tip" title="Betriebssystem für Router">Freifunk Firmware</span>
                                     unterstützt wird.
                                     Wähle ein unterstütztes Router-Modell aus unserer <strong><a href="/firmware.html">Firmware-Tabelle</a></strong>.
-                                    Wenn du dir nicht sicher bist, welches Modell für dich geeignet ist, wähle eines der
-                                    empfohlenen Modelle.
+                                    Wenn du dir nicht sicher bist, welches Modell für dich geeignet ist, wähle eines der empfohlenen Modelle.
                                 </p>
 
                                 <h6>Empfohlene Router-Modelle</h6>
@@ -62,8 +62,7 @@ layout: base
 
                 <!-- <div class="row">
                     <div class="eleven columns">
-                        <a class="primary button right" href="#firmware">Weiter zu "Firmware
-                            einspielen"</a>
+                        <a class="primary button right" href="#firmware">Weiter zu "Firmware einspielen"</a>
                     </div>
                 </div>-->
 
@@ -79,22 +78,20 @@ layout: base
                             </div>
                             <div class="content">
                                 <p>
-                                    Viele Router-Modelle gibt es in unterschiedlichen Hardware-Revisionen (Versionen).
-                                    <span class="alert label">Wichtig</span>Aus diesem Grund ist es <strong>sehr wichtig</strong> zu ermitteln um welche
-                                    Hardware-Revision es sich
-                                    bei deinem Router handelt, damit du auch die richtige Firmware herunterladen kannst.
+                                    Viele Router-Modelle gibt es in unterschiedlichen Hardware-Revisionen (Versionen).<br />
+                                    <span class="alert label">Wichtig</span> Aus diesem Grund ist es <strong>sehr wichtig</strong> zu ermitteln um welche
+                                    Hardware-Revision es sich bei deinem Router handelt, damit du auch die richtige Firmware herunterladen kannst.
                                 </p>
 
                                 <p class="text-center">
                                     <img src="images/firmware-einspielen/firmware-hwrev.png" width="60%"/>
                                 </p>
-                                <p class="text-center"><i>Modellbezeichnung (1) und die Hardware-Revision (2) stehen auf
-                                        der Rückseite deines Routers.</i></p>
-
-                                <br/>
+                                <p class="text-center">
+                                    <i>Modellbezeichnung (1) und die Hardware-Revision (2) stehen auf der Rückseite deines Routers.</i>
+                                </p>
+                                <br />
                                 <p>
-                                    Lade nun die passende Firmware für die Erstinstallation von unserer <a
-                                            href="firmware.html">Firmware Seite</a> herunter.
+                                    Lade nun die passende Firmware für die Erstinstallation von unserer <a href="firmware.html">Firmware Seite</a> herunter.
                                 </p>
                             </div>
                         </li>
@@ -114,10 +111,11 @@ layout: base
                                 </p>
 
                                 <p class="text-center">
-                                    <i>Bitte schraube zuerst die Antenne(n) (1) an die Gewindestecker des Routers (2),
-                                        den du anschließend
-                                        mit dem beiliegenden Steckernetzteil (3) mit Strom versorgst. Verbinde danach
-                                        den Router und deinen Computer mit dem beiliegenden Netzwerkkabel (4).</i>
+                                    <i>
+                                        Bitte schraube zuerst die Antenne(n) (1) an die Gewindestecker des Routers (2),
+                                        den du anschließend mit dem beiliegenden Steckernetzteil (3) mit Strom versorgst. Verbinde danach
+                                        den Router und deinen Computer mit dem beiliegenden Netzwerkkabel (4).
+                                    </i>
                                 </p>
 
                                 <p>
@@ -131,8 +129,10 @@ layout: base
                                     <img src="images/firmware-einspielen/firmware-dev-ports.png" width="60%"/>
                                 </p>
                                 <p class="text-center">
-                                    <i>Hier siehts du z.B. die Ports eines TP-Link TL-WR841ND. Die gelben Buchsen sind
-                                        für LAN (ja, hier reinstecken) und die blauen für WAN.</i>
+                                    <i>
+                                        Hier siehts du z.B. die Ports eines TP-Link TL-WR841ND. Die gelben Buchsen sind für LAN (ja, hier reinstecken)
+                                        und die blauen für WAN.
+                                    </i>
                                 <p>
                             </div>
                         </li>
@@ -149,22 +149,19 @@ layout: base
                                 </p>
 
                                 <p>
-                                    Öffne in einem Internet Browser deiner Wahl die Adresse <a
-                                            href="{{ site.data.ffmwu.firmware.internal_ip }}"
-                                            target="_blank">{{ site.data.ffmwu.firmware.internal_ip }}</a>.
+                                    Öffne in einem Internet Browser deiner Wahl die Adresse <a href="{{ site.data.ffmwu.firmware.internal_ip }}" target="_blank">{{ site.data.ffmwu.firmware.internal_ip }}</a>.
                                     Die neueren Geräte sind unter dieser Adresse erreichbar. Falls das nicht
                                     funktionieren sollte hast du evtl. ein älteres Modell erwischt:
                                 </p>
                                 <ul>
-                                    <li>Probiere <a href="http://192.168.1.1" target="_blank">http://192.168.1.1</a> aus
-                                    </li>
+                                    <li>Probiere <a href="http://192.168.1.1" target="_blank">http://192.168.1.1</a> aus</li>
                                     <li>Suche auf der Rückseite des Geräts nach Hinweisen</li>
                                     <li>Schaue im Handbuch nach</li>
                                 </ul>
                                 <br/>
                                 <p>
-                                Wenn das funktioniert hat, musst du dich nun mit Benutzernamen und Passwort anmelden. In
-                                den meisten Fällen ist das:
+                                    Wenn das funktioniert hat, musst du dich nun mit Benutzernamen und Passwort anmelden. In
+                                    den meisten Fällen ist das:
                                 </p>
                                 <ul>
                                     <li>Benutzername: "admin"</li>
@@ -174,8 +171,7 @@ layout: base
                                 <p>
                                     Sollte das nicht funktionieren, schaue im Handbuch oder auf der Rückseite des
                                     Routers nach oder setze das Gerät mit dem Reset-Knopf auf die Werkseinstellungen
-                                    zurück
-                                    und versuche es anschließend erneut.
+                                    zurück und versuche es anschließend erneut.
                                 </p>
                             </div>
                         </li>
@@ -189,8 +185,7 @@ layout: base
                                     <img src="images/firmware-einspielen/firmware-orig-start.png"/>
                                 </p>
                                 <p class="text-center">
-                                    <i>Einstiegsseite des TP-Link Routers mit Original Firmware. Folge dem Link "System
-                                        Tools".</i>
+                                    <i>Einstiegsseite des TP-Link Routers mit Original Firmware. Folge dem Link "System Tools".</i>
                                 </p>
                                 <hr/>
 
@@ -198,12 +193,13 @@ layout: base
                                     <img src="images/firmware-einspielen/firmware-orig-selectimage.png"/>
                                 </p>
                                 <p class="text-center">
-                                    <i>Das Untermenü "System Tools" öffnet sich. Wähle den Unterpunkt "Firmware
-                                        Upgrade".</i>
+                                    <i>Das Untermenü "System Tools" öffnet sich. Wähle den Unterpunkt "Firmware Upgrade".</i>
                                 </p>
                                 <p class="text-center">
-                                    <i>Zuerst die Firmware Datei auswählen (1), die zuvor heruntergeladen wurde. Danach
-                                        mit einem Klick auf "Upgrade" (2) den Prozess starten.</i>
+                                    <i>
+                                        Zuerst die Firmware Datei auswählen (1), die zuvor heruntergeladen wurde.
+                                        Danach mit einem Klick auf "Upgrade" (2) den Prozess starten.
+                                    </i>
                                 </p>
                                 <hr/>
 
@@ -257,8 +253,10 @@ layout: base
                                 <h5>Fragen?</h5>
                             </div>
                             <div class="content">
-                                <p>Solltest du Fragen oder Probleme haben, kannst du dich gerne an uns wenden.
-                                    Kontakt-Möglichkeiten sind ganz unten auf dieser Seite zu finden.</p>
+                                <p>
+                                    Solltest du Fragen oder Probleme haben, kannst du dich gerne an uns wenden.
+                                    Kontakt-Möglichkeiten sind ganz unten auf dieser Seite zu finden.
+                                </p>
                             </div>
                         </li>
                     </ul>
@@ -274,7 +272,8 @@ layout: base
                                 <h5>1: Konfigurationsseite öffnen</h5>
                             </div>
                             <div class="content">
-                                <p>Rufe die folgende URL in einem Browser auf: <strong><a href="http://192.168.1.1">http://192.168.1.1</a></strong>
+                                <p>
+                                    Rufe die folgende URL in einem Browser auf: <strong><a href="http://192.168.1.1">http://192.168.1.1</a></strong>
                                 </p>
 
                                 <p class="text-center">
@@ -309,16 +308,13 @@ layout: base
                             </div>
                             <div class="content">
                                 <p>
-                                    Wenn keine anderen Knoten in WLAN Reichweite sind, setze nun einen Haken hinter <em>"Mesh-VPN
-                                        aktivieren"</em>,
-                                    um eine verschlüsselte Verbindung über deinen Internet-Router zu den
-                                    Freifunk-Servern herzustellen.
+                                    Wenn keine anderen Knoten in WLAN Reichweite sind, setze nun einen Haken hinter <em>"Mesh-VPN aktivieren"</em>,
+                                    um eine verschlüsselte Verbindung über deinen Internet-Router zu den Freifunk-Servern herzustellen.
                                     Die Freifunk-Server verbinden deinen Freifunk-Knoten über das Internet mit allen
                                     anderen Teilen des Freifunk-Netzes,
                                     die nicht über WLAN erreicht werden. Wenn diese Option nicht aktiviert wird kann
                                     dein Knoten nur über einen weiteren
-                                    Freifunk Knoten, der in WLAN Reichweite steht, eine Verbindung zum Freifunk-Netz
-                                    aufbauen.
+                                    Freifunk Knoten, der in WLAN Reichweite steht, eine Verbindung zum Freifunk-Netz aufbauen.
                                     Der Zugang zum Internet ist dann nur möglich, wenn mindestens bei einem der
                                     erreichbaren Knoten diese Option aktiviert ist.
                                 </p>
@@ -406,16 +402,16 @@ layout: base
                                     vorausgefüllt hat.
                                 </p>
 
-                                <p>Es kann eine Weile dauern, bis dein Knoten die Verbindung zum Freifunk-Netz aufbaut,
-                                    da der Schlüssel manuell eingetragen werden muss.</p>
+                                <p>
+                                    Es kann eine Weile dauern, bis dein Knoten die Verbindung zum Freifunk-Netz aufbaut,
+                                    da der Schlüssel manuell eingetragen werden muss.
+                                </p>
 
                                 <p>
                                     Hast du Mesh-VPN nicht aktiviert, werden diese Daten nicht angezeigt und du brauchst
                                     keine Mail versenden.
-                                    Wenn du möchtest, kannst du dich und deinen neuen Knoten aber trotzdem gerne auf
-                                    unserer
-                                    Mailingliste <a
-                                            href="{{ site.community.url_mailman }}">{{ site.community.mail_discussion }}</a>
+                                    Wenn du möchtest, kannst du dich und deinen neuen Knoten aber trotzdem gerne auf unserer
+                                    Mailingliste <a href="{{ site.community.url_mailman }}">{{ site.community.mail_discussion }}</a>
                                     bekannt machen.
                                 </p>
 
@@ -458,8 +454,10 @@ layout: base
                                 <h5>Fragen?</h5>
                             </div>
                             <div class="content">
-                                <p>Solltest du Fragen oder Probleme haben, kannst du dich gerne an uns wenden.
-                                    Kontakt-Möglichkeiten sind ganz unten auf dieser Seite zu finden.</p>
+                                <p>
+                                    Solltest du Fragen oder Probleme haben, kannst du dich gerne an uns wenden.
+                                    Kontakt-Möglichkeiten sind ganz unten auf dieser Seite zu finden.
+                                </p>
                             </div>
                         </li>
                     </ul>
