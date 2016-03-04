@@ -1,6 +1,6 @@
 require 'i18n'
 
-LOCALE = :de # set your locale
+LOCALE = Jekyll.configuration({})['lang']
 
 # Create folder "_locales" and put some locale file from https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale
 module Jekyll

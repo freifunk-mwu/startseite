@@ -4,7 +4,7 @@ layout: base
 <div class="heading">
     <div class="row">
         <div class="twelve columns">
-            <h1>Blog</h1>
+            <h1>Blog-Archiv: Alle Beiträge</h1>
         </div>
     </div>
 </div>
@@ -13,11 +13,6 @@ layout: base
     <div class="twelve columns">
         {% for post in site.posts %}
             <div class="panel">
-            {% if forloop.index0 == 10 %}
-                <p><a href="/blog-archive.html">&hellip;&nbsp;zum Blog-Archiv</a></p>
-            </div>
-                {% break %}
-            {% endif %}
                 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                 <p class="postdate"><em>{{ post.date | localize: "%d. %B %Y" }}</em></p>
                 <p>{{ post.excerpt | strip_html }}

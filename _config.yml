@@ -1,6 +1,7 @@
 safe: false
 url: http://wiesbaden.freifunk.net
 baseurl: /
+lang: de
 
 community:
   # Metadata
@@ -12,7 +13,7 @@ community:
   ssid: "wiesbaden.freifunk.net"
 
   # Custom URLs
-  url_wiki:  "http://wiki.freifunk-mainz.de"
+  url_wiki:  "https://wiki.freifunk-mwu.de"
   url_calendar:  "/ffwi-calendar.ics"
   url_meshviewer: "https://map.wiesbaden.freifunk.net"
   url_mailman: "http://lists.freifunk.net/mailman/listinfo/wiesbaden-freifunk.net"
@@ -65,6 +66,9 @@ collections:
   events:
     output: true
     permalink: /event/:path/
+  pressemitteilungen:
+    output: true
+    permalink: /pressemitteilung/:path/
 
 # Config for feed.xml, customized version of https://github.com/snaptortoise/jekyll-rss-feeds
 feed:

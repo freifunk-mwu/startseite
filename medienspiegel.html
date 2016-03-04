@@ -1,0 +1,22 @@
+---
+layout: base
+---
+<div class="heading">
+    <div class="row">
+        <div class="twelve columns">
+            <h1>Freifunk Wiesbaden in den Medien</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="twelve columns">
+        {% assign articles = site.data.medienspiegel | sort: 'date' | reverse %}
+        {% for article in articles %}
+            <div class="panel">
+                <p><span class="secondary label">{{ article.medium }}</span> vom {{ article.date | localize: "%d. %B %Y" }}</p>
+                <h3><a href="{{ article.href }}">{{ article.headline }}</a></h3>
+            </div>
+        {% endfor %}
+    </div>
+</div>

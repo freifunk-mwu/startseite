@@ -3,144 +3,469 @@ layout: base
 ---
 
 <div class="heading">
-  <div class="row">
-    <div class="eight columns">
-      <h1>Anleitung</h1>
-      <p>Hier erfährst du alles Notwendige um deinen eigenen Freifunk-Knoten zu betreiben.</p>
+    <div class="row">
+        <div class="eight columns">
+            <h1>Freifunk-Knoten betreiben</h1>
+            <p>Hier erfährst du alles Notwendige, um deinen eigenen Freifunk-Knoten zu betreiben.</p>
+        </div>
     </div>
-  </div>
 </div>
 
 <div class="row">
-  <div class="eight columns">
-    <h3>1. Router auswählen und besorgen</h3>
-    <p>Du benötigst einen Router, der von der Freifunk Firmware unterstützt wird. Wähle ein unterstütztes Modell aus unserer <a href="/firmware.html">Firmware-Tabelle</a> und kaufe dieses bei einem Händler deiner Wahl. Wenn du dir nicht sicher bist, welches Modell für dich geeignet ist, frage entweder bei uns nach oder nehme eines der empfohlenen Modelle.</p>
+    <div class="twelve columns">
+        <p>Die Einrichtung eines Freifunk-Knotens ist nicht schwer, das kann jeder! Alle Schritte, vom Router-Kauf über
+            das Firmware-Flashen bis zum fertigen Freifunk-Knoten auf einen Blick:</p>
 
-    <div class="panel">
-      <p><strong>Aktuell kann man bei uns leider keine Router zum Selbstkostenpreis abholen.</strong></p>
+        <dl class="tabs">
+            <dd class="active"><a href="#router">1. Router auswählen und kaufen</a></dd>
+            <dd><a href="#firmware">2. Firmware einspielen</a></dd>
+            <dd><a href="#node">3. Knoten einrichten</a></dd>
+        </dl>
+        <ul class="tabs-content">
+            <li class="active" id="routerTab">
+                <div class="twelve columns">
+                    <h4>Schritt 1: Router auswählen und kaufen</h4>
+                    <div class="progress twelve"><span class="meter" style="width: 33%;"></span></div>
+                    <ul class="accordion">
+                        <li>
+                            <div class="title">
+                                <h5>Router auswählen</h5>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Du benötigst einen Router, der von der <span class="has-tip"
+                                                                                 title="Betriebssystem für Router">Freifunk Firmware</span>
+                                    unterstützt wird.
+                                    Wähle ein unterstütztes Router-Modell aus unserer <strong><a href="/firmware.html">Firmware-Tabelle</a></strong>.
+                                    Wenn du dir nicht sicher bist, welches Modell für dich geeignet ist, wähle eines der
+                                    empfohlenen Modelle.
+                                </p>
+
+                                <h6>Empfohlene Router-Modelle</h6>
+
+                                {% include choose_router.html %}
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <h5>Router kaufen</h5>
+                            </div>
+                            <div class="content">
+
+                                {% include get_router.html %}
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <div class="row">
+                    <div class="eleven columns">
+                        <a class="primary button right" href="#firmware">Weiter zu "Firmware
+                            einspielen"</a>
+                    </div>
+                </div>-->
+
+            </li>
+            <li id="firmwareTab">
+                <div class="twelve columns">
+                    <h4>Schritt 2: Firmware einspielen</h4>
+                    <div class="progress twelve"><span class="meter" style="width: 66%;"></span></div>
+                    <ul class="accordion">
+                        <li>
+                            <div class="title">
+                                <h5>1: Firmware-Datei herunterladen</h5>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Viele Router-Modelle gibt es in unterschiedlichen Hardware-Revisionen (Versionen).
+                                    <span class="alert label">Wichtig</span>Aus diesem Grund ist es <strong>sehr wichtig</strong> zu ermitteln um welche
+                                    Hardware-Revision es sich
+                                    bei deinem Router handelt, damit du auch die richtige Firmware herunterladen kannst.
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/firmware-einspielen/firmware-hwrev.png" width="60%"/>
+                                </p>
+                                <p class="text-center"><i>Modellbezeichnung (1) und die Hardware-Revision (2) stehen auf
+                                        der Rückseite deines Routers.</i></p>
+
+                                <br/>
+                                <p>
+                                    Lade nun die passende Firmware für die Erstinstallation von unserer <a
+                                            href="firmware.html">Firmware Seite</a> herunter.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>2: Router mit dem Computer verbinden</h5>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Nun ist es Zeit die Antennen (falls vorhanden) an deinen Router zu schrauben und
+                                    diesen mit deinem Computer zu verbinden.
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/firmware-einspielen/firmware-dev-overview.png" width="60%"/>
+                                </p>
+
+                                <p class="text-center">
+                                    <i>Bitte schraube zuerst die Antenne(n) (1) an die Gewindestecker des Routers (2),
+                                        den du anschließend
+                                        mit dem beiliegenden Steckernetzteil (3) mit Strom versorgst. Verbinde danach
+                                        den Router und deinen Computer mit dem beiliegenden Netzwerkkabel (4).</i>
+                                </p>
+
+                                <p>
+                                    Das Netzwerkkabel muss in den sogenannten LAN-Port (Netzwerkbuchse) am Router
+                                    angeschlossen werden. Bei den TP-Link Geräten sind das meistens die gelben Buchsen.
+                                    In der Regel sind die Buchsen aber auch entsprechend mit LAN bzw. WAN
+                                    (Internetbuchse) gekennzeichnet.
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/firmware-einspielen/firmware-dev-ports.png" width="60%"/>
+                                </p>
+                                <p class="text-center">
+                                    <i>Hier siehts du z.B. die Ports eines TP-Link TL-WR841ND. Die gelben Buchsen sind
+                                        für LAN (ja, hier reinstecken) und die blauen für WAN.</i>
+                                <p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>3: Administrations-Webseite aufrufen</h5>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Um die Freifunk Firmware einzuspielen benötigst du auf deinem Computer einen
+                                    Internet Browser und die passende Firmware Datei, die du
+                                    schon unter 1 heruntergeladen hast.
+                                </p>
+
+                                <p>
+                                    Öffne in einem Internet Browser deiner Wahl die Adresse <a
+                                            href="{{ site.data.ffmwu.firmware.internal_ip }}"
+                                            target="_blank">{{ site.data.ffmwu.firmware.internal_ip }}</a>.
+                                    Die neueren Geräte sind unter dieser Adresse erreichbar. Falls das nicht
+                                    funktionieren sollte hast du evtl. ein älteres Modell erwischt:
+                                </p>
+                                <ul>
+                                    <li>Probiere <a href="http://192.168.1.1" target="_blank">http://192.168.1.1</a> aus
+                                    </li>
+                                    <li>Suche auf der Rückseite des Geräts nach Hinweisen</li>
+                                    <li>Schaue im Handbuch nach</li>
+                                </ul>
+                                <br/>
+                                <p>
+                                Wenn das funktioniert hat, musst du dich nun mit Benutzernamen und Passwort anmelden. In
+                                den meisten Fällen ist das:
+                                </p>
+                                <ul>
+                                    <li>Benutzername: "admin"</li>
+                                    <li>Passwort: "admin"</li>
+                                </ul>
+                                <br/>
+                                <p>
+                                    Sollte das nicht funktionieren, schaue im Handbuch oder auf der Rückseite des
+                                    Routers nach oder setze das Gerät mit dem Reset-Knopf auf die Werkseinstellungen
+                                    zurück
+                                    und versuche es anschließend erneut.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>4: Firmware installieren</h5>
+                            </div>
+                            <div class="content">
+                                <p class="text-center">
+                                    <img src="images/firmware-einspielen/firmware-orig-start.png"/>
+                                </p>
+                                <p class="text-center">
+                                    <i>Einstiegsseite des TP-Link Routers mit Original Firmware. Folge dem Link "System
+                                        Tools".</i>
+                                </p>
+                                <hr/>
+
+                                <p class="text-center">
+                                    <img src="images/firmware-einspielen/firmware-orig-selectimage.png"/>
+                                </p>
+                                <p class="text-center">
+                                    <i>Das Untermenü "System Tools" öffnet sich. Wähle den Unterpunkt "Firmware
+                                        Upgrade".</i>
+                                </p>
+                                <p class="text-center">
+                                    <i>Zuerst die Firmware Datei auswählen (1), die zuvor heruntergeladen wurde. Danach
+                                        mit einem Klick auf "Upgrade" (2) den Prozess starten.</i>
+                                </p>
+                                <hr/>
+
+                                <p class="text-center">
+                                    <img src="images/firmware-einspielen/firmware-orig-confirm.png"/>
+                                </p>
+                                <p class="text-center">
+                                    Du musst einmal bestätigen, dass du die neue Firmware wirklich einspielen willst.
+                                </p>
+                                <hr/>
+
+                                <p>
+                                    Fast geschafft. Die Freifunk Firmware wird nun auf deinen Knoten geladen und
+                                    installiert. Bitte ziehe auf keinen Fall das Strom- oder Netzwerkkabel
+                                    heraus. Das Gerät wäre anschließend defekt.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>5: Fertig - Router startet neu</h5>
+                            </div>
+                            <div class="content">
+                                <p class="text-center">
+                                    <img src="images/firmware-einspielen/firmware-orig-process.png"/>
+                                </p>
+                                <p class="text-center">
+                                    Warte bis der Prozess vollständig abgeschlossen ist.
+                                </p>
+
+                                <p>
+                                    Nachdem die Firmware fertig eingespielt ist, startet dein Freifunk-Knoten neu. Nach
+                                    ca. einer Minute ist dein Knoten bereit für die Konfiguration.
+                                    <br/>
+                                    <br/>
+                                    In der Regel wird für die Einrichtung eine andere IP-Adresse verwendet. Damit dein
+                                    Rechner/Laptop automatisch eine neue IP-Adresse erhält
+                                    ziehe das Netzwerkkabel an deinem Rechner/Laptop einmal raus, warte einen kurzen
+                                    Moment und stöpsle es wieder ein.
+                                    Rufe danach die Adresse <a href="{{ site.data.ffmwu.firmware.gluon_config_ip }}"
+                                                               target="_blank">{{ site.data.ffmwu.firmware.gluon_config_ip }}</a>
+                                    in deinem Browser auf und folge den Anweisungen
+                                    unserer <a href="/knoten-einrichten.html">Einrichtungsanleitung</a>.
+                                </p>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <h5>Fragen?</h5>
+                            </div>
+                            <div class="content">
+                                <p>Solltest du Fragen oder Probleme haben, kannst du dich gerne an uns wenden.
+                                    Kontakt-Möglichkeiten sind ganz unten auf dieser Seite zu finden.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li id="nodeTab">
+                <div class="twelve columns">
+                    <h4>Schritt 3: Knoten einrichten</h4>
+                    <div class="progress twelve"><span class="meter" style="width: 100%;"></span></div>
+                    <ul class="accordion">
+                        <li>
+                            <div class="title">
+                                <h5>1: Konfigurationsseite öffnen</h5>
+                            </div>
+                            <div class="content">
+                                <p>Rufe die folgende URL in einem Browser auf: <strong><a href="http://192.168.1.1">http://192.168.1.1</a></strong>
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/knoten-einrichten/wizard-start.png"/>
+                                    <i>Config-Mode eines Freifunk-Knotens</i>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>2: Knotenname</h5>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Als Erstes gibst du deinem Knoten einen Namen.
+                                    Nimm einen, der dir gefällt und der vielleicht ein wenig über den Standort des
+                                    Knotens aussagt.
+                                    Bitte beachte, dass keine Sonderzeichen außer der Bindestrich im Namen erlaubt sind.
+                                    Wenn du ein Leerzeichen brauchst, verwende einen Bindestrich.
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/knoten-einrichten/wizard-hostname.png"/>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>3: Mesh-VPN</h5>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Wenn keine anderen Knoten in WLAN Reichweite sind, setze nun einen Haken hinter <em>"Mesh-VPN
+                                        aktivieren"</em>,
+                                    um eine verschlüsselte Verbindung über deinen Internet-Router zu den
+                                    Freifunk-Servern herzustellen.
+                                    Die Freifunk-Server verbinden deinen Freifunk-Knoten über das Internet mit allen
+                                    anderen Teilen des Freifunk-Netzes,
+                                    die nicht über WLAN erreicht werden. Wenn diese Option nicht aktiviert wird kann
+                                    dein Knoten nur über einen weiteren
+                                    Freifunk Knoten, der in WLAN Reichweite steht, eine Verbindung zum Freifunk-Netz
+                                    aufbauen.
+                                    Der Zugang zum Internet ist dann nur möglich, wenn mindestens bei einem der
+                                    erreichbaren Knoten diese Option aktiviert ist.
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/knoten-einrichten/wizard-meshvpn.png"/>
+                                </p>
+
+                                <p>
+                                    Optional kannst du die Bandbreite, die von deinem Internet-Anschluss maximal benutzt
+                                    werden soll, fest limitieren.
+                                    Willst du die Bandbreit limitieren, setze den Haken "Mesh-VPN Bandbreite begrenzen"
+                                    und trage in die beiden Felder
+                                    darunter die gewünschten Limits ein. Die Minimalwerte sind 1000 im oberen und 100 im
+                                    unteren Feld.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>4: Standort</h5>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Wenn du möchtest, dass du und andere Mitmenschen den Standort deines Knotens in der
+                                    <a href="{{ site.community.url_meshviewer }}">Freifunk-Karte</a> sehen können,
+                                    dann musst du hier ein Häkchen setzen und in die rot unterlegten Felder
+                                    Geo-Koordinaten eintragen. Die erforderlichen Werte für den Breiten- und Längengrad
+                                    kannst du
+                                    auf unserer <a href="{{ site.community.url_meshviewer }}">Freifunk-Karte</a> mit
+                                    Hilfe des Stecknadel Buttons ermitteln.
+                                    Die Geo-Koordinaten werden dir in einem kleinen Popup-Fenster angezeigt.
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/knoten-einrichten/wizard-standort.png"/>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>5: Kontakt</h5>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Um einen Knoten-Betreiber erreichen zu können, braucht die Gemeinschaft eine
+                                    Kontakt-Möglichkeit.
+                                    Du kannst dazu in diesem Feld beispielsweise eine E-Mail Adresse eintragen oder
+                                    einen Namen, der dir von
+                                    anderen aktiven Freifunkern zugeordnet werden kann. Beachte, dass die Kontaktdaten,
+                                    die du hier eingibts, öffentlich zugänglich sind.
+                                    Wenn Du magst, kannst du hier mehrere Werte eintragen. Trenne diese bitte mit einem
+                                    Komma.
+                                    Wenn du unsicher bist, dann lass dieses Feld leer. Du kannst das später noch ändern.
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/knoten-einrichten/wizard-kontakt.png"/>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>6: Knoten bekanntmachen</h5>
+                            </div>
+                            <div class="content">
+                                <p>Klicke auf <em>Speichern & Neustarten</em>.</p>
+
+                                <p class="text-center">
+                                    <img src="images/knoten-einrichten/wizard-fertig.png"/>
+                                </p>
+
+                                <p>
+                                    Die nun erscheinende Seite fasst zusammen, was du als Nächstes tun solltest.
+                                    Hast du in Schritt 3 das Mesh-VPN aktiviert, zeigt die Seite wie in der Abbildung
+                                    einen eingerahmten Block an, welcher deinen Knoten Namen und einen VPN-Schlüssel
+                                    enthält.
+                                    Sende den Inhalt dieses Blocks an <a
+                                            href="mailto:{{ site.community.mail_keys }}">{{ site.community.mail_keys }}</a>.
+                                    Wenn du auf die als Link angezeigte E-Mail Adresse klickst öffnet sich automatisch
+                                    dein E-Mail Programm mit einer neuen E-Mail, die alle erforderlichen Werte schon
+                                    vorausgefüllt hat.
+                                </p>
+
+                                <p>Es kann eine Weile dauern, bis dein Knoten die Verbindung zum Freifunk-Netz aufbaut,
+                                    da der Schlüssel manuell eingetragen werden muss.</p>
+
+                                <p>
+                                    Hast du Mesh-VPN nicht aktiviert, werden diese Daten nicht angezeigt und du brauchst
+                                    keine Mail versenden.
+                                    Wenn du möchtest, kannst du dich und deinen neuen Knoten aber trotzdem gerne auf
+                                    unserer
+                                    Mailingliste <a
+                                            href="{{ site.community.url_mailman }}">{{ site.community.mail_discussion }}</a>
+                                    bekannt machen.
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/knoten-einrichten/wizard-geschafft.png"/>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <h5>7: Knoten ans Internet anschließen</h5>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Nun kannst du den Knoten ans Internet anschließen. Dazu musst du das LAN-Kabel auf
+                                    der Rückseite deines
+                                    Knoten umstecken: Bisher hattest du das Kabel im LAN-Port (gelb). Jetzt muss es in
+                                    den WAN-Port (blau). Verbinde
+                                    dann noch das andere Ende des Kabels mit deinem Internet-Router und dein neuer
+                                    Freifunk-Knoten ist am Netz.
+                                </p>
+
+                                <p class="text-center">
+                                    <img src="images/knoten-einrichten/g4007.png"/>
+                                </p>
+
+                                <p>
+                                    Wie unter Schritt 6 schon beschrieben brauchst du deinen Freifunk-Knoten nicht mit
+                                    deinem Internet-Router
+                                    zu verbinden, wenn du ihn als "Mesh-Only Knoten" betreiben willst. Du hast z.B.
+                                    schon einen Freifunk-Knoten,
+                                    der mit deinem Internet-Router verbunden ist und möchtest das Freifunk Signal
+                                    erweitern.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <h5>Fragen?</h5>
+                            </div>
+                            <div class="content">
+                                <p>Solltest du Fragen oder Probleme haben, kannst du dich gerne an uns wenden.
+                                    Kontakt-Möglichkeiten sind ganz unten auf dieser Seite zu finden.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
     </div>
-
-    <h5>Empfohlene Modelle</h5>
-
-    <dl class="tabs">
-      <dd class="active"><a href="#simple1">Indoor</a></dd>
-      <dd><a href="#simple2">Outdoor</a></dd>
-      <dd><a href="#simple3">Richtfunk</a></dd>
-    </dl>
-    <ul class="tabs-content">
-      <li class="active" id="simple1Tab">
-        <table>
-          <thead>
-            <tr>
-              <th>Modell</th>
-              <th>Merkmale</th>
-              <th>Preis</th>
-              <th>Hersteller-Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>TP-Link TL-WR1043ND</td>
-              <td>2,4 GHz, 720 MHz CPU, 64MB RAM</td>
-              <td>~40 &euro;</td>
-              <td><a href="http://www.tp-link.de/products/details/?categoryid=&model=TL-WR1043ND" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>TP-Link TL-WDR4300</td>
-              <td>2,4 & 5 GHz, 560 MHz CPU, 128 MB RAM</td>
-              <td>~50 &euro;</td>
-              <td><a href="http://www.tp-link.de/products/details/?categoryid=&model=TL-WDR4300" target="_blank">Link<a></td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li id="simple2Tab">
-        <table>
-          <thead>
-            <tr>
-              <th>Modell</th>
-              <th>Merkmale</th>
-              <th>Preis</th>
-              <th>Hersteller-Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>TP-Link CPE210</td>
-              <td>2,4 GHz Sektorantenne, H 65° / E 35°, PoE + Passtrough</td>
-              <td>~50 &euro;</td>
-              <td><a href="http://www.tp-link.de/products/details/?categoryid=&model=CPE210" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti Nanostation NSM2</td>
-              <td>2,4 GHz Sektorantenne 11 dBi Gain, H 55° / V 53° / E 27°, PoE + Passtrough</td>
-              <td>~50 &euro;</td>
-              <td><a href="https://www.ubnt.com/airmax/nanostationm/" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti Nanostation locoM2</td>
-              <td>2,4 GHz Sektorantenne 8 dBi Gain, H 60° / V 60° / E 60°, PoE</td>
-              <td>~50 &euro;</td>
-              <td><a href="https://www.ubnt.com/airmax/nanostationm/" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti UniFi AP Outdoor+</td>
-              <td>2,4 GHz Rundstrahler, PoE</td>
-              <td>~160 &euro;</td>
-              <td><a href="https://www.ubnt.com/unifi/unifi-ap-outdoor/" target="_blank">Link<a></td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li id="simple3Tab">
-        <p>
-          <strong>Wichtig: Diese Geräte müssen aufgrund der Vorschriften für das 5 GHz Frequenzband in Deutschland mit der original Hersteller Firmware betrieben werden.</strong>
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Modell</th>
-              <th>Merkmale</th>
-              <th>Preis</th>
-              <th>Hersteller-Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>TP-Link CPE510</td>
-              <td>5 GHz Sektorantenne, H 45° / E 30°, PoE + Passtrough</td>
-              <td>~50 &euro;</td>
-              <td><a href="http://www.tp-link.de/products/details/?categoryid=&model=CPE510" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti Nanostation NSM5</td>
-              <td>2,4 GHz Sektorantenne 14.6-16.1 dBi Gain, H 43° / V 41° / E 15°, PoE + Passtrough</td>
-              <td>~80 &euro;</td>
-              <td><a href="https://www.ubnt.com/airmax/nanostationm/" target="_blank">Link<a></td>
-            </tr>
-            <tr>
-              <td>Ubiquiti Nanostation locoM5</td>
-              <td>2,4 GHz Sektorantenne 13 dBi Gain, H 45° / V 45° / E 45°, PoE</td>
-              <td>~65 &euro;</td>
-              <td><a href="https://www.ubnt.com/airmax/nanostationm/" target="_blank">Link<a></td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<div class="row">
-  <div class="eight columns">
-    <h3>2. Firmware einspielen</h3>
-    <p>Nachdem du nun deinen Router vor dir hast muss unsere Freifunk-Firmware aufgespielt werden. Folge dazu bitte unserer <a href="/firmware-einspielen.html">Anleitung zum Firmware einspielen</a>.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="eight columns">
-    <h3>3. Knoten einrichten</h3>
-    <p>Nun hast du es fast geschafft. Unsere Freifunk-Firmware ist installiert und wartet jetzt auf ein paar Eingaben von dir. Folge dazu bitte unserer <a href="/knoten-einrichten.html">Anleitung zum Knoten einrichten</a>.</p>
-  </div>
 </div>

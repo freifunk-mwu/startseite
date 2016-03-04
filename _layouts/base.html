@@ -22,6 +22,7 @@
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="/stylesheets/foundation.min.css">
   <link rel="stylesheet" href="/stylesheets/app.css">
+  <link rel="stylesheet" href="/stylesheets/responsive-tables.css">
 
   <script src="/javascripts/modernizr.foundation.js"></script>
   <script src="/javascripts/ics.deps.min.js"></script>
@@ -35,62 +36,22 @@
 </head>
 <body>
 
-  <!-- Header and Nav -->
-
-
-  <div class="row header">
-    <div class="nine columns">
-      <h1>
-        Freifunk {{ site.community.name }}
-      </h1>
-
-      <ul class="link-list">
-        <li><a href="/">Home</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/mitmachen.html">Mitmachen!</a></li>
-        <li><a href="/anleitung.html">Anleitung</a></li>
-        <li><a href="/treffen.html">Treffen</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- End Header and Nav -->
+  <header class="row header">
+      <div class="eight columns">
+          <h1>
+              Freifunk {{ site.community.name }}
+          </h1>
+          {% include nav.html %}
+      </div>
+      <div class="four columns">
+          {% include metanav.html %}
+      </div>
+  </header>
 
   {{ content }}
 
-  <footer>
-    <div class="row">
-      <div class="six columns">
-        <h5>Kontakt</h5>
-          <dl class="inline-definition-list">
-              <dt>E-Mail</dt>
-              <dd><a href="mailto:{{ site.community.mail_info}}">{{ site.community.mail_info }}</a></dd>
-              <dt>Mailingliste</dt>
-              <dd><a href="{{ site.community.url_mailman }}">{{ site.community.mail_discussion }}</a></dd>
-              <dt>IRC</dt>
-              <dd><a href="{{ site.community.irc }}">{{ site.community.irc }}</a> im <a href="http://hackint.eu/">hackint</a> (<a href="{{ site.community.irc_web }}">Webclient</a>)</dd>
-              <dt>Twitter</dt>
-              <dd><a href="https://twitter.com/{{ site.community.twitter }}">@{{ site.community.twitter }}</a></dd>
-              <dt>Facebook</dt>
-              <dd><a href="https://facebook.com/{{ site.community.facebook }}">{{ site.community.facebook }}</a></dd>
-              <dt></dt>
-              <dd><a href="/impressum.html">Impressum</a></dd>
-          </dl>
-
-      </div>
-        <div class="six columns">
-          <h5>Links</h5>
-          <ul>
-            <li><a target="_blank" href="{{ site.community.url_git }}">Github</a></li>
-            <li><a target="_blank" href="{{ site.community.url_meshviewer }}">Freifunk Karte</a></li>
-            <li><a target="_blank" href="{{ site.community.url_calendar }}">Kalender (ical Feed)</a></li>
-          </ul>
-            <h5>Spenden</h5>
-            {% include spenden.html %}
-        </div>
-    </div>
+  <footer class="panel">
+      {% include footer.html %}
   </footer>
 
   <!-- Included JS Files (Compressed) -->
@@ -98,5 +59,6 @@
 
   <!-- Initialize JS Plugins -->
   <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/responsive-tables.js"></script>
 </body>
 </html>
