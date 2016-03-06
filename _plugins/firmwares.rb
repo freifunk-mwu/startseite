@@ -4,6 +4,14 @@ require 'nokogiri'
 require 'pp'
 
 GROUPS = {
+  "ALFA" => {
+    models: [
+      "AP121",
+      "AP121u",
+      "Hornet-UB",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "Allnet" => {
     models: [
       "ALL0315N"
@@ -12,13 +20,16 @@ GROUPS = {
   },
   "Buffalo" => {
     models: [
-      "WZR-HP-AG300H/WZR-600DHP",
+      "WZR-600DHP",
+      "WZR-HP-AG300H",
+      "WZR-HP-G300NH",
       "WZR-HP-G450H",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
   "D-Link" => {
     models: [
+      "DIR-505",
       "DIR-615",
       "DIR-825",
     ],
@@ -46,18 +57,26 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
   },
+  "Onion" => {
+    models: [
+      "Omega"
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "TP-Link" => {
     models: [
       "CPE210",
       "CPE220",
       "CPE510",
       "CPE520",
+      "TL-MR13U",
       "TL-MR3020",
       "TL-MR3040",
       "TL-MR3220",
       "TL-MR3420",
       "TL-WA701N/ND",
       "TL-WA750RE",
+      "TL-WA7510N",
       "TL-WA801N/ND",
       "TL-WA830RE",
       "TL-WA850RE",
@@ -76,12 +95,16 @@ GROUPS = {
       "TL-WR743N/ND",
       "TL-WR841N/ND",
       "TL-WR842N/ND",
+      "TL-WR843N/ND",
+      "TL-WR940N/ND",
       "TL-WR941N/ND",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "Ubiquiti" => {
     models: [
+      "AirGateway",
+      "AirRouter",
       "Bullet M",
       "Loco M",
       "Nanostation M",
@@ -89,6 +112,7 @@ GROUPS = {
       "Rocket M",
       "UniFi AP Pro",
       "UniFi",
+      "UniFiAP Outdoor+",
       "UniFiAP Outdoor",
     ],
     extract_rev: lambda { |model, suffix|
@@ -110,14 +134,36 @@ GROUPS = {
       end
     }
   },
+  "Wd" => {
+    models: [
+      "My Net N600",
+      "My Net N750",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "x86" => {
     models: [
+      "64",
+      "64 VMware",
+      "64 VirtualBox",
       "Generic",
       "KVM",
       "VirtualBox",
       "VMware",
+      "Xen",
     ],
     extract_rev: lambda { |model, suffix| nil },
+    transform_label: lambda { |model|
+      if model == '64' then
+        'Generic 64-Bit'
+      elsif model == '64 VMware' then
+        'VMware 64-Bit'
+      elsif model == '64 VirtualBox' then
+        'VirtualBox 64-Bit'
+      else
+        model
+      end
+    }
   },
 }
 
@@ -167,7 +213,7 @@ module Jekyll
       def sanitize_model_name(name)
         name
           .downcase
-          .gsub(/[^\w\-\.]+/, '-')
+          .gsub(/[^\w\-\+\.]+/, '-')
           .gsub(/\.+/, '.')
           .gsub(/[\-\.]*-[\-\.]*/, '-')
           .gsub(/-+$/, '')
