@@ -1,8 +1,8 @@
 ---
 layout: event
 title: "2. Freifunk Treffen im März"
-start: 2016-03-31T19:00:00.00+01:00
-end: 2016-03-31T22:00:00.00+01:00
+start: 2016-03-31T19:00:00.00+02:00
+end: 2016-03-31T22:00:00.00+02:00
 location: "Chaos Computer Club Mainz Wiesbaden"
 locationurl: "https://www.cccmz.de/"
 ---
