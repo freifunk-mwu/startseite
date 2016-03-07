@@ -43,7 +43,7 @@ layout: base
             {% for event in site.data.upcomingEvents %}
                 {% if forloop.index0 == 0 %}{% continue %}{% endif %}
                 <tr>
-                    <td><strong>{{ event.title }}</strong></td>
+                    <td><strong><a href="{{ event.url }}">{{ event.title }}</a></strong></td>
                     <td>{{ event.start | localize: "%d. %B %Y, %H:%M" }} Uhr</td>
                     <td>
                         {% if event.locationurl %}<a href="{{ event.locationurl }}">{% endif %}{{ event.location }}{% if event.locationurl %}</a>{% endif %}

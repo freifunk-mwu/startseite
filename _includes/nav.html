@@ -7,7 +7,7 @@
     <ul class="left">
         {% for item in site.data.nav.section %}
             <li{% if item.dropdown %} class="has-dropdown"{% endif %}>
-                <a href="{{ item.href }}">{{ item.title }}</a>
+                <a href="/{{ item.href }}">{{ item.title }}</a>
                 {% if item.dropdown %}
                     <ul class="dropdown">
                         {% for subitem in item.dropdown %}
