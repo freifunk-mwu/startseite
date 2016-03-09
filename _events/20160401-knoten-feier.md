@@ -7,12 +7,10 @@ location: "Kreativfabrik Wiesbaden"
 locationurl: "http://www.kreativfabrik-wiesbaden.de"
 ---
 
-Liebe Knotenbetreiber,
-
 {: .right }
 [![64 Knoten-Feier bei den Bilderwerfern 2015](/images/blog/64_nodes_cake.jpg){:height="192px" width="192px"}](/images/blog/64_nodes_cake.jpg)
 
-das Bürger-WLAN Freifunk Wiesbaden ist in seinem ersten Jahr erfreulich schnell gewachsen - dank dir und vielen weiteren Menschen, die mitmachen und ihr WLAN teilen.
+Das Bürger-WLAN Freifunk Wiesbaden ist in seinem ersten Jahr erfreulich schnell gewachsen - dank aller Knotenbetreiber und vielen weiteren Menschen, die mitmachen und ihr WLAN teilen.
 Mittlerweile gibt es knapp 256 Knoten im Wiesbadener Freifunk-Netz. Es kommt also ca. jeden zweiten Tag ein neuer Knoten hinzu. 
 
 Den Zuwachs an neuen Knoten feiern wir Freifunker regelmäßig und zwar immer dann, wenn eine Woche lang 2<sup>n</sup> Knoten online waren.
@@ -34,7 +32,7 @@ Dazu laden wir dich ganz herzlich am Freitag, den 01. April 2016, in die Kreativ
   <tbody>
     <tr>
       <td>18:00</td>
-      <td>Sektempfang mit den netzpolitischen Sprechern der Rathausfraktionen</td>
+      <td>Sektempfang mit Netzpolitikern und Unterstützern</td>
     </tr>
     <tr>
       <td>18:15</td>
@@ -42,7 +40,7 @@ Dazu laden wir dich ganz herzlich am Freitag, den 01. April 2016, in die Kreativ
     </tr>
     <tr>
       <td>18:30</td>
-      <td>offene Runde</td>
+      <td>Get-together</td>
     </tr>
     <tr>
       <td>20:00</td>
