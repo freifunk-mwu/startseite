@@ -137,7 +137,7 @@ div.mejs-container {
 }
 
 /* <nav> */
-.top-bar { background: transparent; height: 35px; line-height: 35px; }
+.top-bar { background: transparent; line-height: 35px; }
 .top-bar ul, .top-bar ul li { background-color: #dc0067; height: auto; }
 .top-bar ul > li a:not(.button) { color: #ffffff; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; }
 .top-bar ul > li:hover, .top-bar ul > li:active { background-color: #900043; }
