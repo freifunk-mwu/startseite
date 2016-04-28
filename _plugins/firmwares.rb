@@ -4,6 +4,19 @@ require 'nokogiri'
 require 'pp'
 
 GROUPS = {
+  "8devices" => {
+    models: [
+      "Carambola2-Board",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+    transform_label: lambda { |model|
+      if model == 'Carambola2-Board' then
+        'Carambola 2'
+      else
+        model
+      end
+    }
+  },
   "ALFA" => {
     models: [
       "AP121",
@@ -48,6 +61,15 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
+  "Meraki" => {
+    models: [
+      "MR12",
+      "MR16",
+      "MR62",
+      "MR66",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "NETGEAR" => {
     models: [
       "WNDR3700",
@@ -62,6 +84,30 @@ GROUPS = {
       "Omega"
     ],
     extract_rev: lambda { |model, suffix| nil },
+  },
+  "OpenMesh" => {
+    models: [
+      "MR600",
+      "MR900",
+      "OM2P",
+      "OM2P-HS",
+      "OM2P-LC",
+      "OM5P",
+      "OM5P-AN"
+    ],
+    extract_rev: lambda { |model, suffix|
+      rev = /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1]
+
+      if model == 'MR600' or model == 'MR900' or model == 'OM2P' or model == 'OM2P-HS'
+        if rev == 'v2'
+          'v2'
+        else
+          'v1'
+        end
+      else
+        nil
+      end
+    },
   },
   "TP-Link" => {
     models: [
