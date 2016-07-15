@@ -43,5 +43,5 @@ und organisieren den Ausbau des Netzes. Dabei werden sie zunehmend auch
 von Kommunen unterstützt.
 
 Für Rückfragen stehen wir unter der E­Mail-Adresse
-[presse@freifunk­wiesbaden.de](mailto:presse@freifunk-wiesbaden.de) gern zur Verfügung. Mehr Informationen auf
+[presse@freifunk-wiesbaden.de](mailto:presse@freifunk-wiesbaden.de) gern zur Verfügung. Mehr Informationen auf
 unserer Webseite [http://wiesbaden.freifunk.net/](http://wiesbaden.freifunk.net/)
