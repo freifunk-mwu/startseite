@@ -1,8 +1,8 @@
 ---
 layout: event
-title: "1. Freifunk Treffen im August"
-start: 2016-08-09T19:00:00.00+02:00
-end: 2016-08-09T22:00:00.00+02:00
+title: "2. Freifunk Treffen im August"
+start: 2016-08-25T19:00:00.00+02:00
+end: 2016-08-25T22:00:00.00+02:00
 location: "Chaos Computer Club Mainz Wiesbaden"
 locationurl: "https://www.cccmz.de/"
 ---
