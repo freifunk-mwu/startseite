@@ -1,6 +1,6 @@
 ---
 layout: event
-title: "2. Freifunk Treffen im September"
+title: "2. Freifunk Treffen im Oktober"
 start: 2016-10-23T19:00:00.00+02:00
 end: 2016-10-23T22:00:00.00+02:00
 location: "Chaos Computer Club Mainz Wiesbaden"
