@@ -1,8 +1,8 @@
 ---
 layout: event
 title: "2. Freifunk Treffen im November"
-start: 2016-11-24T19:00:00.00+02:00
-end: 2016-11-24T22:00:00.00+02:00
+start: 2016-11-24T19:00:00.00+01:00
+end: 2016-11-24T22:00:00.00+01:00
 location: "Chaos Computer Club Mainz Wiesbaden"
 locationurl: "https://www.cccmz.de/"
 ---
