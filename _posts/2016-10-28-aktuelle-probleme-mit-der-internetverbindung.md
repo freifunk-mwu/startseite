@@ -1,15 +1,15 @@
 ---
 layout: post
 title: "Aktuelle Probleme mit der Internetverbindung"
-author: günni, mattsches
-teaser: "Ab dem 15.09.2016 aktivieren wir öffentliches IPv6 im Freifunk-Netz."
-excerpt: "Ab dem 15.09.2016 aktivieren wir öffentliches IPv6 im Freifunk-Netz. Was das bedeutet und wieso wir das machen."
+author: david, günni, mattsches
+teaser: "Aktuelle Probleme beim Internetzugang über Freifunk Wiesbaden."
+excerpt: "Aktuell gibt es teilweise Probleme beim Internetzugang über Freifunk Wiesbaden."
 ---
 
-In den letzten Tagen kam es immer wieder zu Problemen beim Surfen über Freifunk Wiesbaden. Wir sind diesen Problemen auf den Grund gegangen.
+In den vergangenen Tagen kam es immer wieder zu Verbindungsabbrüchen und Problemen mit dem Internetzugang über unsere bzw. eure Freifunk-Knoten. Nach unseren Erfahrungen sind nicht alle Teilnehmer des Freifunk Wiesbaden-Netzes im gleichen Ausmaß betroffen.
 
-Die Störung hat leider gleich mehrere Ursachen. Eine Ursache liegt am dezentralen Ansatz von Freifunk, der dazu führt, dass wir gleich vier Gateways, also Server im Internet, betreiben. Die Gateways kommunizieren untereinander. Seit der [Umstellung auf öffentliche IPv6-Adressen](/2016/08/24/Public-IPv6-Aktivierung.html) ist der Datenverkehr zwischen den Gateways angestiegen. Wir werden daher die Kommunikation in Bahnen lenken, indem wir zwischen den Gateways virtuelle Tunnel einrichten. So wird die Intergate-Kommunikation reduziert.
+Wir arbeiten mit Hochdruck an einer Lösung und halten euch auf dem Laufenden. Bitte schaut wieder in unser Blog (also hier) oder abonniert uns bei Twitter (https://twitter.com/freifunkwi) oder Facebook (https://facebook.com/FreifunkWiesbaden). So seid ihr die Ersten, die erfahren, wenn es wieder reibungslos funktioniert. :)
 
-Eine zweite Ursache war ein Konfigurationsfehler auf einem der Gateways, der mittlerweile behoben worden wurde. Die dritte Ursache ist etwas schwieriger zu beheben, da sie zum wesentlichen Teil auf unserer aktuell angewandten Technik beruht. Wir setzen das Programm [fastd](https://wiki.freifunk.net/Fastd) für die gesicherte Verbindung zwischen Knoten und Gateways ein. Dieses Programm stellt in unserem Fall einen Flaschenhals dar, da es nicht parallel mehrere CPU-Kerne auslasten kann.
+In der Zwischenzeit dürfen wir euch um Geduld bitten und um eure Mitarbeit bei Freifunk werben: Wir brauchen eure hellen Köpfe!
 
-Wir hoffen jedoch, dass schon durch die ersten von uns vorgenommenen Änderungen das Surfen bereits wieder reibungslos funktioniert, und bitten um etwas Geduld.
+(Update 30.10.2016: Inhalt des Artikels überarbeitet und korrigiert.)
