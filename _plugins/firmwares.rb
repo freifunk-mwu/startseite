@@ -17,11 +17,13 @@ GROUPS = {
       end
     }
   },
-  "ALFA" => {
+  "ALFA-Network" => {
     models: [
       "AP121",
       "AP121u",
       "Hornet-UB",
+      "N2-N5",
+      "Tube2H",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -36,6 +38,7 @@ GROUPS = {
       "WZR-600DHP",
       "WZR-HP-AG300H",
       "WZR-HP-G300NH",
+      "WZR-HP-G300NH2",
       "WZR-HP-G450H",
     ],
     extract_rev: lambda { |model, suffix| nil },
@@ -47,6 +50,12 @@ GROUPS = {
       "DIR-825",
     ],
     extract_rev: lambda { |model, suffix| /^-rev-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1].upcase },
+  },
+  "GL" => {
+    models: [
+      "AR150",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
   },
   "GL-iNet" => {
     models: [
@@ -75,7 +84,7 @@ GROUPS = {
       "WNDR3700",
       "WNDR3800",
       "WNDR4300",
-      "WNDRMAC"
+      "WNDRMAC",
     ],
     extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
   },
@@ -89,17 +98,21 @@ GROUPS = {
     models: [
       "MR600",
       "MR900",
+      "MR1750",
       "OM2P",
       "OM2P-HS",
       "OM2P-LC",
       "OM5P",
-      "OM5P-AN"
+      "OM5P-AC",
+      "OM5P-AN",
     ],
     extract_rev: lambda { |model, suffix|
       rev = /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1]
 
-      if model == 'MR600' or model == 'MR900' or model == 'OM2P' or model == 'OM2P-HS'
-        if rev == 'v2'
+      if model == 'MR600' or model == 'MR900' or model == 'MR1750' or model == 'OM2P' or model == 'OM2P-LC' or model == 'OM2P-HS' or model == 'OM5P' or model == 'OM5P-AC' or model == 'OM5P-AN' then
+        if rev == 'v3' then
+          'v3'
+        elsif rev == 'v2' then
           'v2'
         else
           'v1'
@@ -109,8 +122,24 @@ GROUPS = {
       end
     },
   },
+  "Raspberry" => {
+    models: [
+      "PI",
+      "PI 2",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+    transform_label: lambda { |model|
+      if model == 'PI' then
+        'PI 1'
+      else
+        model
+      end
+    },
+  },
   "TP-Link" => {
     models: [
+      "Archer C5",
+      "Archer C7",
       "CPE210",
       "CPE220",
       "CPE510",
@@ -152,10 +181,19 @@ GROUPS = {
       "AirGateway",
       "AirRouter",
       "Bullet M",
+      "Bullet M2",
+      "Bullet M5",
       "Loco M",
+      "Nanostation Loco M2",
+      "Nanostation Loco M5",
       "Nanostation M",
-      "Picostation M",
+      "Nanostation M2",
+      "Nanostation M5",
+      "Picostation M2",
       "Rocket M",
+      "Rocket M2",
+      "Rocket M5",
+      "UniFi AC Lite",
       "UniFi AP Pro",
       "UniFi",
       "UniFiAP Outdoor+",
@@ -164,9 +202,9 @@ GROUPS = {
     extract_rev: lambda { |model, suffix|
       rev = /^(.*?)(?:-sysupgrade)?\.bin$/.match(suffix)[1]
 
-      if rev == '-xw'
+      if rev == '-xw' then
         'XW'
-      elsif model == 'Nanostation M' or model == 'Bullet M' or model == 'Loco M' or model == 'Picostation M' or model == 'Rocket M'
+      elsif model == 'Nanostation M' or model == 'Nanostation M2' or model == 'Nanostation M5' or model == 'Nanostation Loco M2' or model == 'Nanostation Loco M5' or model == 'Bullet M' or model == 'Bullet M2' or model == 'Bullet M5' or model == 'Loco M' or model == 'Loco M2' or model == 'Loco M5' or model == 'Picostation M' or model == 'Picostation M2' or model == 'Rocket M' or model == 'Rocket M2' or model == 'Rocket M5' then
         'XM'
       else
         nil
@@ -175,6 +213,10 @@ GROUPS = {
     transform_label: lambda { |model|
       if model == 'UniFi' then
         'UniFi AP (LR)'
+      elsif model == 'Loco M' then
+        'Nanostation Loco M2/M5'
+      elsif model == 'Nanostation M' then
+        'Nanostation M2/M5'
       else
         model
       end
@@ -303,7 +345,7 @@ module Jekyll
 
       @prefixes = firmwares.keys.sort_by { |p| p.length }.reverse
 
-      firmware_regex = Regexp.new('^' + site.config['firmware']['prefix'] + '-' + site.config['firmware']['version'] + '-')
+      firmware_regex = Regexp.new('^' + site.config['firmware']['prefix'] + '-' + site.config['firmware']['major_version'] + '\+' + site.config['firmware']['minor_version'] + '-')
 
       factory = get_files(site.config['firmware']['base'] + "factory/", firmware_regex)
       sysupgrade = get_files(site.config['firmware']['base'] + "sysupgrade/", firmware_regex)
@@ -333,6 +375,15 @@ module Jekyll
       end
 
       firmwares.delete_if { |k, v| v[:revisions].empty? }
+
+      duplicate_models = [
+        "Bullet M",
+        "Rocket M"
+      ]
+
+      for model in duplicate_models
+        firmwares.delete_if { |k, v| v[:model] == model }
+      end
 
       groups = firmwares
                .collect { |k, v| v[:revisions] }
