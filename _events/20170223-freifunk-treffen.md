@@ -1,6 +1,6 @@
 ---
 layout: event
-title: "2. Freifunk Treffen im Februar"
+title: "Freifunk Treffen im Februar"
 start: 2017-02-23T19:00:00.00+01:00
 end: 2017-02-23T22:00:00.00+01:00
 location: "Chaos Computer Club Mainz Wiesbaden"

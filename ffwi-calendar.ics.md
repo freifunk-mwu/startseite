@@ -29,9 +29,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+ORGANIZER;CN=Freifunk Wiesbaden:MAILTO:info@freifunk-wiesbaden.de
 DTSTART;TZID=Europe/Berlin:{{ site.data.upcomingEvents.first.start | date: "%Y%m%dT%k%M00" }}
 DTEND;TZID=Europe/Berlin:{{ site.data.upcomingEvents.first.end | date: "%Y%m%dT%k%M00" }}
-RRULE:FREQ=MONTHLY;BYDAY=2TH,-1TH
+RRULE:FREQ=MONTHLY;BYSETPOS=-1;BYDAY=TH;INTERVAL=1
 DTSTAMP:20150306T111045Z
 UID:20150301T111015Z@freifunk-wiesbaden.de
 CREATED:20150306T111015Z
