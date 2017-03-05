@@ -56,6 +56,6 @@ meta:
   - title: "Karte"
     href: "https://map.wiesbaden.freifunk.net"
   - title: "FAQ"
-    href: "faq.html"
+    href: "/faq.html"
   - title: "Kontakt"
     href: "#contact"
