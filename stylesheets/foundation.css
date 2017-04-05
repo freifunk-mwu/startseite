@@ -805,18 +805,6 @@ div.alert-box.secondary { background-color: #ffcb05; color: black; text-shadow: 
 div.alert-box a.close { color: #333; position: absolute; right: 4px; top: -1px; font-size: 17px; opacity: 0.2; padding: 4px; }
 div.alert-box a.close:hover, div.alert-box a.close:focus { opacity: 0.4; }
 
-/* Callouts ---------------------- */
-.callout { position: relative; margin: 0 0 1rem 0; padding: 1rem; border: 1px solid rgba(10, 10, 10, 0.25); border-radius: 0; background-color: white; color: #0a0a0a; }
-  .callout > :first-child { margin-top: 0; }
-  .callout > :last-child { margin-bottom: 0; }
-  .callout.primary { background-color: #d7ecfa; color: #0a0a0a; }
-  .callout.secondary { background-color: #eaeaea; color: #0a0a0a; }
-  .callout.success { background-color: #e1faea; color: #0a0a0a; }
-  .callout.warning { background-color: #fff3d9; color: #0a0a0a; }
-  .callout.alert { background-color: #f7e4e1; color: #0a0a0a; }
-  .callout.small { padding-top: 0.5rem; padding-right: 0.5rem; padding-bottom: 0.5rem; padding-left: 0.5rem; }
-  .callout.large { padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; }
-
 /* Labels ---------------------- */
 .label { padding: 1px 4px 2px; font-size: 12px; font-weight: bold; text-align: center; text-decoration: none; line-height: 1; white-space: nowrap; display: inline; position: relative; bottom: 1px; color: #fff; background: #dc0067; }
 .label.radius { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
