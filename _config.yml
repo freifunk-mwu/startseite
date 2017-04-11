@@ -30,6 +30,7 @@ community:
   irc: "ircs://irc.hackint.net/ffmwu"
   irc_web: "https://kiwiirc.com/client/irc.hackint.net/#ffmwu"
   facebook: "FreifunkWiesbaden"
+  telegram: "freifunkwiesbaden"
 
   # GPS
   geo_lat: 50.08
