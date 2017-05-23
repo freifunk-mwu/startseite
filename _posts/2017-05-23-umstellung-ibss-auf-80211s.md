@@ -8,7 +8,7 @@ excerpt: "Wir stellen den WLAN-Modus, der für die automatische WLAN-Verbindung 
 
 ### TL;DR
 Wir stellen den WLAN-Modus, der für die automatische WLAN-Verbindung
-zwischen Knoten, die in WLAN-Reichweite zueinander stehen, auf eine neue
+zwischen Knoten, die in WLAN-Reichweite zueinander stehen zuständig ist, auf eine neue
 Technologie um.
 Alle Knotenbereiber werden gebeten ihre Freifunk-Knoten während des
 Update-Zeitraums in Betrieb zu nehmen, damit diese mit der aktuellen
