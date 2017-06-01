@@ -1,6 +1,6 @@
 ---
 layout: event
-title: "Freifunk Treffen im July"
+title: "Freifunk Treffen im Juli"
 start: 2017-07-27T19:00:00.00+02:00
 end: 2017-07-27T22:00:00.00+02:00
 location: "Chaos Computer Club Mainz Wiesbaden"
