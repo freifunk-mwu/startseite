@@ -3,15 +3,17 @@ layout: event
 title: "Freifunk Treffen im Juni"
 start: 2017-06-29T19:00:00.00+02:00
 end: 2017-06-29T22:00:00.00+02:00
-location: "Chaos Computer Club Mainz Wiesbaden"
-locationurl: "https://www.cccmz.de/"
+location: "20. Open-Air Filmfest, Reisinger Anlagen"
+locationurl: "http://bilderwerfer.de/"
 ---
 
 Ab 19 Uhr bieten wir Informationen und Hilfestellung für Freifunk-Neulinge an.
-Spätestens um 20:30 Uhr beginnen wir dann mit unserer Agenda.
+Dieses Mal treffen wir uns anlässlich des 20. Open-Air Filmfestes der Bilderwerfer in den Reisinger Anlagen gegenüber dem Hauptbahnhof.
 
-CCCMZ e.V.<br>
-Sedanplatz 7<br>
-65183 Wiesbaden
 
-Webseite des Chaostreffs: <a href="https://www.cccmz.de">www.cccmz.de</a>
+20. Open-Air Filmfest<br>
+Reisinger Anlagen, gegenüber Hauptbahnhof<br>
+Wiesbaden
+
+Webseite der Bilderwerfer: <a href="http://bilderwerfer.de">bilderwerfer.de</a>
+
