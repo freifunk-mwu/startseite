@@ -3,7 +3,7 @@ layout: post
 title: "Neue stabile Firmware 2016.2.6+mwu1"
 author: MAGIC
 teaser: "Unser Firmware-Team hat die neue stabile Version 2016.2.6+mwu1 der Freifunk-Firmware veröffentlicht."
-excerpt: "Nachdem keine Fehlermeldungen mit der testing-version 2016.2.6+mwu1 eingegangen sind, ist diese Version nun wie angekündigt "stable"."
+excerpt: "Nachdem keine Fehlermeldungen mit der testing-version 2016.2.6+mwu1 eingegangen sind, ist diese Version nun wie angekündigt stable."
 ---
 
 Hallo Freifunkas in Mainz, Wiesbaden und Umgebung,
