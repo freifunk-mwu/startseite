@@ -42,9 +42,9 @@ community:
 
 firmware:
   base: "https://firmware.wiesbaden.freifunk.net/stable/"
-  version: "2016.2.5+mwu3"
-  major_version: "2016.2.5"
-  minor_version: "mwu3"
+  version: "2016.2.6+mwu1"
+  major_version: "2016.2.6"
+  minor_version: "mwu1"
   prefix: "gluon-ffwi"
   type: "gluon"
 
