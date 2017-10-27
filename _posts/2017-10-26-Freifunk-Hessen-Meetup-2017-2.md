@@ -38,7 +38,7 @@ Vor Beginn werden wir gemeinsam über die Reihenfolge des Programms entscheiden.
 PENGland \\
 Weisenauer Straße 15 \\
 55131 Mainz \\
-[http://www.pengland.de](]http://www.pengland.de)
+[Webseite des PENGlands](http://www.pengland.de)
 
 ##### Lage und Anfahrt
 [Karte](https://osm.org/go/0DepYS8M6--) \\
