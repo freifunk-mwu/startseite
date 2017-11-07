@@ -22,7 +22,7 @@ Bei Anmeldefragen bitte eine Mail an die Orga.
 |---|----|-------------|
 |Tag|Zeit|Programmpunkt|
 |---|----|-------------|
-|10.11.|ab 19:00 Uhr|Meet & Eat|
+|10.11.|ab 19:15 Uhr|Meet & Eat im [Proviantamt](http://www.proviant-magazin.de)|
 |11.11.|ab 10:00 Uhr|Start Ganztagesfrühstück|
 |11.11.|11:00 – 18:15 Uhr|Vorträge/Workshops/Diskussionen|
 |11.11.|ab 18:15 Uhr|Abendprogramm|
@@ -33,6 +33,11 @@ Bei Anmeldefragen bitte eine Mail an die Orga.
 Wir sammeln Ideen für Workshops/Vorträge/Diskussionspunkte in diesem [Pad](https://pad.freifunk-mwu.de/p/meetup-FFHE-172). \\
 Vor Beginn werden wir gemeinsam über die Reihenfolge des Programms entscheiden.
 
+#### Meat & Eat Location
+Proviantamt \\
+Schillerstraße 11a \\
+55116 Mainz \\
+[Webseite](http://www.proviant-magazin.de)
 
 #### Veranstaltungsort
 PENGland \\
