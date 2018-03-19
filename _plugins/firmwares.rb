@@ -54,6 +54,7 @@ GROUPS = {
   "GL" => {
     models: [
       "AR150",
+      "AR300M",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -144,12 +145,15 @@ GROUPS = {
       "CPE220",
       "CPE510",
       "CPE520",
+      "RE450",
       "TL-MR13U",
       "TL-MR3020",
       "TL-MR3040",
       "TL-MR3220",
       "TL-MR3420",
       "TL-WA701N/ND",
+      "TL-WA7210N",
+      "TL-WA730RE",
       "TL-WA750RE",
       "TL-WA7510N",
       "TL-WA801N/ND",
@@ -162,6 +166,7 @@ GROUPS = {
       "TL-WDR4300",
       "TL-WDR4900",
       "TL-WR1043N/ND",
+      "TL-WR1043N",
       "TL-WR2543N/ND",
       "TL-WR703N",
       "TL-WR710N",
@@ -174,11 +179,15 @@ GROUPS = {
       "TL-WR940N",
       "TL-WR940N/ND",
       "TL-WR941N/ND",
+      "WBS210",
+      "WBS510",
     ],
-    extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+    extract_rev: lambda { |model, suffix| /^(?:-(.+?)(?:-sysupgrade)?)?\.bin$/.match(suffix)[1] },
   },
   "Ubiquiti" => {
     models: [
+      "AirGateway LR",
+      "AirGateway PRO",
       "AirGateway",
       "AirRouter",
       "Bullet M",
@@ -191,11 +200,17 @@ GROUPS = {
       "Nanostation M2",
       "Nanostation M5",
       "Picostation M2",
+      "Rocket M TI",
       "Rocket M",
+      "Rocket M2 TI",
       "Rocket M2",
+      "Rocket M5 TI",
       "Rocket M5",
       "UniFi AC Lite",
-      "UniFi AP Pro",
+      "UniFi AC Pro",
+      "UniFi AP LR",
+      "UniFi AP PRO",
+      "UniFi AP",
       "UniFi",
       "UniFiAP Outdoor+",
       "UniFiAP Outdoor",
@@ -205,23 +220,19 @@ GROUPS = {
 
       if rev == '-xw' then
         'XW'
-      elsif model == 'Nanostation M' or model == 'Nanostation M2' or model == 'Nanostation M5' or model == 'Nanostation Loco M2' or model == 'Nanostation Loco M5' or model == 'Bullet M' or model == 'Bullet M2' or model == 'Bullet M5' or model == 'Loco M' or model == 'Loco M2' or model == 'Loco M5' or model == 'Picostation M' or model == 'Picostation M2' or model == 'Rocket M' or model == 'Rocket M2' or model == 'Rocket M5' then
+      elsif model == 'Nanostation M2' or model == 'Nanostation M5' or model == 'Nanostation Loco M2' or model == 'Nanostation Loco M5' or model == 'Bullet M2' or model == 'Bullet M5' or model == 'Loco M2' or model == 'Loco M5' or model == 'Picostation M2' or model == 'Rocket M2' or model == 'Rocket M5' then
         'XM'
       else
         nil
       end
     },
-    transform_label: lambda { |model|
-      if model == 'UniFi' then
-        'UniFi AP (LR)'
-      elsif model == 'Loco M' then
-        'Nanostation Loco M2/M5'
-      elsif model == 'Nanostation M' then
-        'Nanostation M2/M5'
-      else
-        model
-      end
-    }
+  },
+  "Ubnt" => {
+    models: [
+      "ERX-SFP",
+      "ERX",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
   },
   "Wd" => {
     models: [
@@ -233,22 +244,29 @@ GROUPS = {
   "x86" => {
     models: [
       "64",
-      "64 VMware",
-      "64 VirtualBox",
+      "64.vdi",
+      "64.vmdk",
       "Generic",
-      "KVM",
-      "VirtualBox",
-      "VMware",
-      "Xen",
+      "Generic.vdi",
+      "Generic.vmdk",
+      "Geode",
     ],
     extract_rev: lambda { |model, suffix| nil },
     transform_label: lambda { |model|
-      if model == '64' then
+      if model == 'Generic' then
+        'Generic 32-Bit'
+      elsif model == 'Generic.vdi' then
+	'VirtualBox 32-Bit'
+      elsif model == 'Generic.vmdk' then
+        'VMware 32-Bit'
+      elsif model == '64' then
         'Generic 64-Bit'
-      elsif model == '64 VMware' then
-        'VMware 64-Bit'
-      elsif model == '64 VirtualBox' then
+      elsif model == '64.vdi' then
         'VirtualBox 64-Bit'
+      elsif model == '64.vmdk' then
+        'VMware 64-Bit'
+      elsif model == 'Geode' then
+        'Geode 32-Bit'
       else
         model
       end
@@ -336,7 +354,7 @@ module Jekyll
                fw = Firmware.new
                fw.label = label
                fw.group = group
-               fw.hwrev = rev
+               fw.hwrev = rev || nil
                fw
              },
            }
@@ -357,6 +375,7 @@ module Jekyll
         info = firmwares[basename]
 
         hwrev = info[:extract_rev].call info[:model], suffix
+        hwrev = '' if hwrev.nil?
 
         fw = info[:revisions][hwrev]
         fw.factory = site.config['firmware']['base'] + "factory/" + href
@@ -369,6 +388,7 @@ module Jekyll
         info = firmwares[basename]
 
         hwrev = info[:extract_rev].call info[:model], suffix
+        hwrev = '' if hwrev.nil? || hwrev == 'sysupgrade'
 
         fw = info[:revisions][hwrev]
         fw.sysupgrade = site.config['firmware']['base'] + "sysupgrade/" + href
@@ -379,7 +399,10 @@ module Jekyll
 
       duplicate_models = [
         "Bullet M",
-        "Rocket M"
+        "Loco M",
+        "Nanostation M",
+        "Rocket M",
+        "Rocket M TI"
       ]
 
       for model in duplicate_models
