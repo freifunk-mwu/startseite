@@ -375,7 +375,7 @@ module Jekyll
         info = firmwares[basename]
 
         hwrev = info[:extract_rev].call info[:model], suffix
-        hwrev = '' if hwrev.nil?
+        hwrev = nil if hwrev.nil?
 
         fw = info[:revisions][hwrev]
         fw.factory = site.config['firmware']['base'] + "factory/" + href
@@ -388,7 +388,7 @@ module Jekyll
         info = firmwares[basename]
 
         hwrev = info[:extract_rev].call info[:model], suffix
-        hwrev = '' if hwrev.nil? || hwrev == 'sysupgrade'
+        hwrev = nil if hwrev.nil? || hwrev == 'sysupgrade'
 
         fw = info[:revisions][hwrev]
         fw.sysupgrade = site.config['firmware']['base'] + "sysupgrade/" + href

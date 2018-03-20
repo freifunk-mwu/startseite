@@ -46,7 +46,7 @@ layout: base
           <td>
             {% for fw in model[1] %}
             {% if fw[1].factory %}
-            {% if fw[0].present? %}
+            {% if fw[0] %}
             <strong>{{ fw[0] }}:</strong>
             {% endif %}
             <a href="{{ fw[1].factory }}">factory</a>
@@ -57,7 +57,7 @@ layout: base
           <td>
             {% for fw in model[1] %}
             {% if fw[1].sysupgrade %}
-            {% if fw[0].present? %}
+            {% if fw[0] %}
             <strong>{{ fw[0] }}:</strong>
             {% endif %}
             <a href="{{ fw[1].sysupgrade }}">sysupgrade</a>
