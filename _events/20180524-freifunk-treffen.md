@@ -10,7 +10,7 @@ locationurl: "https://www.cccwi.de/"
 Unser monatliches Treffen beginnt um 19:00 Uhr. Freifunk-Neulinge sind immer herzlich Willkommen!
 Ab ca. 20:30 Uhr beginnen wir mit unserer <a href="https://pad.freifunk-mwu.de/p/ffwi_treffen">Agenda</a>.
 
-Chaos Computer Club e.V.<br>
+Chaos Computer Club Wiesbaden e.V.<br>
 Sedanplatz 7<br>
 65183 Wiesbaden
 
