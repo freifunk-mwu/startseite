@@ -1,4 +1,4 @@
-<p>Unser nächstes Treffen:</p>
+<p>Nächstes Treffen oder Aktion:</p>
 {% assign currentEvent = site.data.upcomingEvents.first %}
 <h3><a href="{{ currentEvent.url }}">{{ currentEvent.start | localize: "%d. %B %Y, %H:%M" }} Uhr</a></h3>
 <p><strong>{{ currentEvent.location }}</strong></p>
