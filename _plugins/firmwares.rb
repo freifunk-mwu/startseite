@@ -55,6 +55,7 @@ GROUPS = {
     models: [
       "AR150",
       "AR300M",
+      "AR750",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -207,6 +208,7 @@ GROUPS = {
       "Rocket M5 TI",
       "Rocket M5",
       "UniFi AC Lite",
+      "UniFi AC Mesh",
       "UniFi AC Pro",
       "UniFi AP LR",
       "UniFi AP PRO",
