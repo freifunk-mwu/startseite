@@ -49,7 +49,7 @@ firmware:
   type: "gluon"
 
   # URL to the site repo (gitweb,github...)
-  gluon_site: "https://github.com/freifunk-mwu/site-ffmwu"
+  gluon_site: "https://github.com/freifunk-mwu/sites-ffmwu"
   # Path to local checkout of the site repo
   gluon_site_dir: "../gluon/site"
 
