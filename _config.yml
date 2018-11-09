@@ -28,7 +28,7 @@ community:
   #sip: ["space@sip.ffgc", "space@10.35.0.1"] # Optional
   twitter: "freifunkwi" # Optional
   irc: "ircs://irc.hackint.net/ffmwu"
-  irc_web: "https://webirc.hackint.org/#irc://irc.hackint.org/#hackint"
+  irc_web: "https://webirc.hackint.org/#irc://irc.hackint.org/#ffmwu"
   facebook: "FreifunkWiesbaden"
   telegram: "freifunkwiesbaden"
 
