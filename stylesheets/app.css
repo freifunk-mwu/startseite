@@ -61,6 +61,10 @@ footer {
   padding: 1em 0;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 div.teaser {
   background: #333;
   padding-top: 1em;
