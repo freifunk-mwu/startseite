@@ -58,6 +58,7 @@ Falls du schon früher in deine Zieldomain wechseln möchtest, kannst du dies, a
 {: .text-justify}
 
 ### Häufige Fragen
+
 ##### Was passiert, sollte mein Freifunk-Knoten am Stichtag ausgeschaltet sein?
 
 In diesem Fall muss unterschieden werden, ob dein Knoten eine VPN-Verbindung zu unseren Gateways aufbaut oder ob dieser ein reiner Mesh-Knoten ist.
