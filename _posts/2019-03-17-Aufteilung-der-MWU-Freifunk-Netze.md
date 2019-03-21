@@ -35,10 +35,10 @@ In den nächsten Wochen werden wir Knoten, die eine aktuelle Stable-Firmware (*2
 Für die automatische Domainmigration beziehen wir automatisch die [BSSID](https://de.wikipedia.org/wiki/Service_Set#SSID,_ESSID_und_BSSID) und Empfangsstärke benachbarter WLAN-Netze von den Knoten, die wir ausschließlich für die temporäre Geolokalisierung der Knoten verwenden und nicht dauerhaft speichern. Dies ist notwendig, da wir für eine große Menge von Knoten keinerlei Positioninformationen kennen, diese aber grob bekannt sein müssen um die passende Zieldomain auszuwählen. Sollten keine WLAN-Netze in der Nähe sein, so wird die Position des Knotens auf der Karte herangezogen. Die Funktion der automatischen Domainmigration kann im Config-Mode unter **Erweiterte Einstellungen -> Multidomain** oder über die Kommandozeile deaktiviert werden. Wir empfehlen aber diese Option aktivert zulassen, so dass euer Knoten immer in die für ihn am passendste Domain wechseln kann.
 {: .text-justify}
 
-```
+~~~
 uci set ffda.director.enabled='0'
 uci commit ffda
-```
+~~~
 
 <p>
 <div class="alert-box secondary">
