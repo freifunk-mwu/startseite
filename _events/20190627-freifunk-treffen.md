@@ -1,17 +1,20 @@
 ---
 layout: event
-title: "Freifunk Treffen im Juni"
-start: 2019-06-27T19:00:00.00+01:00
-end: 2019-06-27T22:00:00.00+01:00
-location: "Chaos Computer Club Wiesbaden"
-locationurl: "https://www.cccwi.de/"
+title: "Freifunk bei den Bilderwerfern"
+start: 2019-06-27T20:00:00.00+02:00
+end: 2019-06-27T24:00:00.00+02:00
+location: "Reisinger Anlagen Wiesbaden"
+locationurl: "http://www.bilderwerfer.de/"
 ---
 
-Unser monatliches Treffen beginnt um 19:00 Uhr. Freifunk-Neulinge sind immer herzlich Willkommen!
-Ab ca. 20:30 Uhr beginnen wir mit unserer <a href="https://pad.freifunk-mwu.de/p/ffwi_treffen">Agenda</a>.
+Seit 2015 unterstützen wir das wunderbare Open-Air Filmfest der Bilderwerfer in den Reisinger Anlagen.
+Wir beamen Freies WLAN auf die Wiese, damit ihr auf Schnelle nochmal z.B. Kritiken zum aktuell laufenden Film checken knnt.
 
-Chaos Computer Club Wiesbaden e.V.<br>
-Sedanplatz 7<br>
-65183 Wiesbaden
+Ihr wollt uns kennen lernen? Spricht die Crew am Getränkestand oder am Bilderwerfer-Container an!
 
-Webseite: <a href="https://www.cccwi.de">www.cccwi.de</a>
+Das Freie WLAN wird euch ca. von 20:00 bis Filmende zur Verfügung stehen.
+
+Webseite: <a href="http://www.bilderwerfer.de">www.bilderwerfer.de</a>
+Facebook: <a href="https://www.facebook.com/bilderwerfer">Bilderwerfer</a>
+Twitter: <a href="https://twitter.com/bilderwerfer">@bilderwerfer</a>
+Instagram: <a href="https://www.instagram.com/bilderwerfer/">@bilderwerfer</a>
