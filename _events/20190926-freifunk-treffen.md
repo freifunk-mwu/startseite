@@ -1,8 +1,8 @@
 ---
 layout: event
 title: "Freifunk Treffen im September"
-start: 2019-09-26T19:00:00.00
-end: 2019-09-26T22:00:00.00
+start: 2019-09-26T19:00:00.00+02:00
+end: 2019-09-26T22:00:00.00+02:00
 location: "Chaos Computer Club Wiesbaden"
 locationurl: "https://www.cccwi.de/"
 ---
