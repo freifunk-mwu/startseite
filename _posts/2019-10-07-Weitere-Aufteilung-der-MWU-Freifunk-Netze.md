@@ -3,6 +3,7 @@ layout: post
 title: "Weitere Aufteilung der MWU Freifunk-Netze"
 author: Admin-Team
 excerpt: "Umzug der Mainzer und Wiesbadener Knoten auf ihre neuen Netze"
+teaser: "Umzug der Mainzer und Wiesbadener Knoten auf ihre neuen Netze"
 ---
 
 Hallo Freifunker in Mainz, Wiesbaden und Umgebung,

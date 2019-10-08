@@ -3,6 +3,7 @@ layout: post
 title: "Aufteilung der MWU Freifunk-Netze"
 author: Admin-Team
 excerpt: "Das Wachstum der letzten Jahre ist technisch nicht spurlos am Freifunk-Netz vorbeigegangen. Um weiter wachsen zu können und Ressourcen besser auszunutzen wird das Netz in den kommenden Wochen in Domains aufgeteilt."
+teaser: "Das Wachstum der letzten Jahre ist technisch nicht spurlos am Freifunk-Netz vorbeigegangen. Um weiter wachsen zu können und Ressourcen besser auszunutzen wird das Netz in den kommenden Wochen in Domains aufgeteilt."
 ---
 
 Hallo Freifunkas in Mainz, Wiesbaden und Umgebung,
