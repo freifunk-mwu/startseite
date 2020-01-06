@@ -1,8 +1,8 @@
 ---
 layout: event
 title: "Freifunk Treffen im Mai"
-start: 2020-05-28T19:00:00.00+01:00
-end: 2020-05-28T22:00:00.00+01:00
+start: 2020-05-28T19:00:00.00+02:00
+end: 2020-05-28T22:00:00.00+02:00
 location: "Chaos Computer Club Wiesbaden"
 locationurl: "https://www.cccwi.de/"
 ---

@@ -1,8 +1,8 @@
 ---
 layout: event
 title: "Freifunk Treffen im Juni"
-start: 2020-06-25T19:00:00.00+01:00
-end: 2020-06-25T22:00:00.00+01:00
+start: 2020-06-25T19:00:00.00+02:00
+end: 2020-06-25T22:00:00.00+02:00
 location: "Chaos Computer Club Wiesbaden"
 locationurl: "https://www.cccwi.de/"
 ---
