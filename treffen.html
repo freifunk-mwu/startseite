@@ -21,9 +21,11 @@ layout: base
   <div class="eight columns">
       <p>Wenn dich Freifunk interessiert, laden wir dich hiermit ein, uns unkompliziert kennen zu lernen. Wir treffen uns immer am letzten Donnerstag im Monat.</p>
       <p>Darüber hinaus findest du hier weitere Termine unserer Aktionen.</p>
+      {% if site.data.upcomingEvents.length > 0 %}
       <div class="callout panel radius">
       {% include current_event.html %}
       </div>
+      {% endif %}
   </div>
   <!--<div class="one column">-->
     <!--<a href="javascript:cal.download()">iCal</a>-->
